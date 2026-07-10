@@ -1,42 +1,97 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { FAQ_ENTRIES } from "../data/faq";
+import { FAQ_SECTIONS } from "../data/faq";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_SECTIONS.flatMap((section) =>
+    section.entries.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: entry.answer,
+      },
+    })),
+  ),
+};
 ---
 
 <BaseLayout
   meta={{
     title: "FAQ",
     description:
-      "Frequently asked questions about Breachwalker — breaches, territories, Strikes, and the closed alpha.",
+      "Frequently asked questions about Breachwalker — rifts, breaches, Strikes, NFT roadmap on Base, and the closed alpha.",
     path: "/faq",
   }}
 >
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
   <header class="page-header">
     <div class="container container--narrow">
       <p class="eyebrow">Support</p>
       <h1>Frequently asked questions</h1>
       <p class="muted">
-        Answers about the breach loop, alpha access, and what Breachwalker is
-        (and is not).
+        The breach loop, closed alpha access, and the roadmap for item economy
+        and NFTs — including what ships now versus later.
       </p>
     </div>
   </header>
 
-  <div class="container container--narrow faq-list">
+  <div class="container container--narrow faq-page">
     {
-      FAQ_ENTRIES.map((entry) => (
-        <details class="faq-item">
-          <summary>{entry.question}</summary>
-          <div class="faq-answer">
-            <p>{entry.answer}</p>
+      FAQ_SECTIONS.map((section) => (
+        <section class="faq-section" aria-labelledby={`faq-${section.id}`}>
+          <h2 id={`faq-${section.id}`} class="faq-section__title">
+            {section.title}
+          </h2>
+          <div class="faq-list">
+            {section.entries.map((entry) => (
+              <details class="faq-item">
+                <summary>{entry.question}</summary>
+                <div class="faq-answer">
+                  <p>{entry.answer}</p>
+                </div>
+              </details>
+            ))}
           </div>
-        </details>
+        </section>
       ))
     }
-    <p style="margin-top: 2rem;">
+    <p class="faq-cta">
       <a class="btn btn--primary" href="/alpha" data-analytics="cta-alpha">
         Request alpha access
       </a>
     </p>
   </div>
 </BaseLayout>
+
+<style>
+  .faq-page {
+    padding-bottom: var(--space-4xl);
+  }
+
+  .faq-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .faq-section__title {
+    font-size: 1.125rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .faq-section .faq-list {
+    padding: 0;
+  }
+
+  .faq-cta {
+    margin-top: var(--space-xl);
+  }
+</style>

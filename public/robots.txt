@@ -4,5 +4,8 @@ Allow: /faq
 Allow: /alpha
 Allow: /privacy
 Allow: /terms
+Allow: /bitcoin-rifts
+Allow: /item-economy
+Allow: /how-it-works
 
 Sitemap: https://breachwalker.com/sitemap-index.xml

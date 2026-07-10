@@ -1,0 +1,94 @@
+---
+const cards = [
+  {
+    label: "Gamers",
+    title: "Extraction survival",
+    body: "Stamina pressure, kit packing, extract-or-collapse — rifts that punish greed.",
+    href: "/how-it-works",
+  },
+  {
+    label: "Bitcoin natives",
+    title: "Rifts from chain history",
+    body: "Deterministic worlds seeded from on-chain data — halving weight, fee danger, atlas growth.",
+    href: "/bitcoin-rifts",
+  },
+  {
+    label: "Item economy",
+    title: "Loot, craft, trade",
+    body: "Grind gear in rifts. Marketplace and utility NFTs on Base — on the roadmap.",
+    href: "/item-economy",
+  },
+] as const;
+---
+
+<section class="audience" aria-labelledby="audience-heading">
+  <div class="container">
+    <h2 id="audience-heading" class="audience__heading">Built for walkers who</h2>
+    <div class="audience__grid">
+      {
+        cards.map((card) => (
+          <a class="audience-card" href={card.href}>
+            <p class="audience-card__label">{card.label}</p>
+            <h3>{card.title}</h3>
+            <p class="muted">{card.body}</p>
+            <span class="audience-card__link">Learn more →</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .audience {
+    padding: var(--space-3xl) 0 var(--space-xl);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .audience__heading {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .audience__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .audience-card {
+    display: block;
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-elevated);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+  }
+
+  .audience-card:hover {
+    border-color: var(--color-border);
+    color: inherit;
+  }
+
+  .audience-card__label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .audience-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .audience-card__link {
+    display: inline-block;
+    margin-top: var(--space-md);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+  }
+</style>

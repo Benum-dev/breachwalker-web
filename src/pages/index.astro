@@ -1,19 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import AudienceCards from "../components/AudienceCards.astro";
+import WhatIs from "../components/WhatIs.astro";
 import TeaserGrid from "../components/TeaserGrid.astro";
+import RoadmapStrip from "../components/RoadmapStrip.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { SITE } from "../data/site";
 ---
 
 <BaseLayout
   meta={{
-    title: SITE.name,
+    title: "Bitcoin-Derived Rift Survival Game",
     description: SITE.description,
     path: "/",
   }}
 >
   <Hero />
+  <AudienceCards />
+  <WhatIs />
   <TeaserGrid />
+  <RoadmapStrip />
   <CtaBand />
 </BaseLayout>

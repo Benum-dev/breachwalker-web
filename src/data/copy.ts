@@ -7,7 +7,7 @@ export const COPY = {
     eyebrow: "Closed alpha opening soon",
     title: "Cross the breach.",
     subhead:
-      "Territories carved from Bitcoin blocks. Pack your expedition kit, breach inward, extract what you can — or collapse back to the surface.",
+      "Rifts carved from Bitcoin’s on-chain history. Pack your expedition kit, breach inward, extract what you can — or collapse back to the surface.",
     ctaPrimary: "Request alpha access",
     ctaSecondary: "How it works",
   },
@@ -16,13 +16,13 @@ export const COPY = {
       id: "breach",
       label: "The breach",
       title: "Surface to depth",
-      body: "From the surface hold you choose a block and begin the breach. Stamina runs down with every step. Extract while you still can, or collapse and wake on the surface with what you kept in the vault.",
+      body: "From the surface hold you choose a rift and begin the breach. Stamina runs down with every step. Extract while you still can, or collapse and wake on the surface with what you kept in the vault.",
     },
     {
-      id: "territories",
-      label: "Territories",
-      title: "Every block is different",
-      body: "Danger, scale, and density vary block by block — derived deterministically from on-chain data. Unbreached blocks wait behind anchor keys. Halving blocks carry harsher weight.",
+      id: "rifts",
+      label: "Rifts",
+      title: "Every rift is different",
+      body: "Danger, scale, and density vary rift by rift — derived deterministically from on-chain data. Uncharted rifts wait behind anchor keys. Halving-era rifts carry harsher weight.",
     },
     {
       id: "kit",
@@ -44,7 +44,7 @@ export const COPY = {
   ] as const,
   ctaBand: {
     title: "Walk the breach first",
-    body: "Closed alpha testers will breach early territories, stress the extract loop, and shape what ships next.",
+    body: "Closed alpha testers will breach early rifts, stress the extract loop, and shape what ships next.",
     button: "Join the alpha list",
   },
   alpha: {
@@ -60,7 +60,7 @@ export const COPY = {
       'Email us with the subject "Alpha access" and we will add you manually.',
   },
   footer: {
-    tagline: "Block-derived expedition survival.",
+    tagline: "Bitcoin-derived rift survival.",
     rights: "All rights reserved.",
   },
 } as const;

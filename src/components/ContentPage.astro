@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { SeoPage } from "../data/seo-pages";
+
+interface Props {
+  page: SeoPage;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  meta={{
+    title: page.metaTitle,
+    description: page.metaDescription,
+    path: page.path,
+  }}
+>
+  <header class="page-header">
+    <div class="container container--narrow">
+      <p class="eyebrow">{page.eyebrow}</p>
+      <h1>{page.title}</h1>
+      <p class="muted lead">{page.intro}</p>
+    </div>
+  </header>
+
+  <article class="container container--narrow prose seo-page">
+    {
+      page.sections.map((section) => (
+        <section>
+          <h2>{section.title}</h2>
+          {section.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+          {section.bullets && (
+            <ul>
+              {section.bullets.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))
+    }
+    <p class="seo-page__cta">
+      <a class="btn btn--primary" href="/alpha" data-analytics="cta-alpha">
+        {page.ctaLabel ?? "Request alpha access"}
+      </a>
+      <a class="btn btn--ghost" href="/faq" style="margin-left: 0.75rem;">
+        Read FAQ
+      </a>
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
+  }
+
+  .seo-page__cta {
+    margin-top: var(--space-2xl);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+</style>
