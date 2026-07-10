@@ -15,10 +15,21 @@ export const SITE = {
   ogImage: "/og/og-default.svg",
   /** Set via PUBLIC_CF_WEB_ANALYTICS_TOKEN in Cloudflare Pages env */
   cfWebAnalyticsToken: import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN ?? "",
-  /** Set via PUBLIC_TALLY_FORM_URL — leave empty to show mailto fallback */
-  tallyFormUrl: import.meta.env.PUBLIC_TALLY_FORM_URL ?? "",
+  /** Tally embed URL — override via PUBLIC_TALLY_FORM_URL env */
+  tallyFormUrl: tallyEmbedUrl(
+    import.meta.env.PUBLIC_TALLY_FORM_URL ?? "https://tally.so/r/KYZpB8",
+  ),
   legalUpdated: "2026-07-10",
 } as const;
+
+/** Accept share links (tally.so/r/…) or embed URLs (tally.so/embed/…) */
+function tallyEmbedUrl(raw: string): string {
+  if (!raw) return "";
+  if (raw.includes("/embed/")) return raw;
+  const match = raw.match(/tally\.so\/r\/([A-Za-z0-9]+)/);
+  if (match) return `https://tally.so/embed/${match[1]}`;
+  return raw;
+}
 
 export type PageMeta = {
   title: string;
