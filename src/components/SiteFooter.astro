@@ -10,6 +10,9 @@ const year = new Date().getFullYear();
     <div class="site-footer__brand">
       <p class="site-footer__name">{SITE.name}</p>
       <p class="site-footer__tagline muted">{COPY.footer.tagline}</p>
+      <p class="site-footer__production muted">
+        <a href={SITE.producer.url}>{SITE.producer.credit}</a>
+      </p>
     </div>
     <nav class="site-footer__nav" aria-label="Footer">
       <a href="/faq">FAQ</a>
@@ -19,7 +22,7 @@ const year = new Date().getFullYear();
       <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
     </nav>
     <p class="site-footer__copy muted">
-      © {year} {SITE.name}. {COPY.footer.rights}
+      © {year} {SITE.producer.name}. {COPY.footer.rights}
     </p>
   </div>
 </footer>
@@ -45,6 +48,20 @@ const year = new Date().getFullYear();
   .site-footer__tagline {
     margin: 0;
     font-size: 0.9375rem;
+  }
+
+  .site-footer__production {
+    margin: var(--space-xs) 0 0;
+    font-size: 0.8125rem;
+  }
+
+  .site-footer__production a {
+    color: var(--color-text-faint);
+    text-decoration: none;
+  }
+
+  .site-footer__production a:hover {
+    color: var(--color-text-muted);
   }
 
   .site-footer__nav {

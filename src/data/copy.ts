@@ -57,7 +57,7 @@ export const COPY = {
     success: "You are on the list. We will reach out when your invite is ready.",
     fallbackTitle: "Signup form loading",
     fallbackBody:
-      "Email us at hello@breachwalker.com with the subject “Alpha access” and we will add you manually.",
+      'Email us with the subject "Alpha access" and we will add you manually.',
   },
   footer: {
     tagline: "Block-derived expedition survival.",

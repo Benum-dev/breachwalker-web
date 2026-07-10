@@ -21,7 +21,8 @@ import { SITE } from "../data/site";
   <article class="container container--narrow prose">
     <p>
       These terms govern your use of <a href={SITE.url}>breachwalker.com</a> and
-      participation in the Breachwalker closed alpha. By using the site or
+      participation in Breachwalker, a production of{" "}
+      <a href={SITE.producer.url}>{SITE.producer.name}</a>. By using the site or
       signing up for alpha access, you agree to these terms.
     </p>
 
@@ -47,7 +48,7 @@ import { SITE } from "../data/site";
 
     <h2>Intellectual property</h2>
     <p>
-      Breachwalker, its name, art, and code are owned by the project operators.
+      Breachwalker, its name, art, and code are owned by {SITE.producer.name}.
       You may not copy or commercialize project assets without written consent.
     </p>
 

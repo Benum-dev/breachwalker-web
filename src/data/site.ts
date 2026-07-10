@@ -4,8 +4,14 @@ export const SITE = {
   description:
     "Block-derived expedition survival. Pack your kit, breach into territories carved from Bitcoin blocks, extract loot — or collapse back to the surface.",
   locale: "en",
-  contactEmail: "hello@breachwalker.com",
-  privacyEmail: "privacy@breachwalker.com",
+  producer: {
+    name: "Benum Labs",
+    url: "https://benumlabs.com",
+    credit: "A Benum Labs production",
+  },
+  /** Until breachwalker.com mail exists — single inbox for contact & privacy */
+  contactEmail: "breachwalker@benumlabs.com",
+  privacyEmail: "breachwalker@benumlabs.com",
   ogImage: "/og/og-default.svg",
   /** Set via PUBLIC_CF_WEB_ANALYTICS_TOKEN in Cloudflare Pages env */
   cfWebAnalyticsToken: import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN ?? "",
