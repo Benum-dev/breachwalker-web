@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0c0f"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#d4a24a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0a0c0f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="600" y="280" text-anchor="middle" fill="#e8ecf1" font-family="Georgia, serif" font-size="72" font-weight="600">Breachwalker</text>
+  <text x="600" y="360" text-anchor="middle" fill="#9aa5b5" font-family="system-ui, sans-serif" font-size="32">Cross the breach.</text>
+  <path d="M600 420 L640 470 L600 520 L560 470 Z" stroke="#d4a24a" stroke-width="3" fill="none"/>
+</svg>

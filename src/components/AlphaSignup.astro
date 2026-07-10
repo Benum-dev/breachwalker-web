@@ -1,0 +1,42 @@
+---
+import { COPY } from "../data/copy";
+import { SITE } from "../data/site";
+
+const tallyUrl = SITE.tallyFormUrl;
+---
+
+<div class="alpha-signup">
+  {
+    tallyUrl ? (
+      <iframe
+        class="tally-frame"
+        data-tally-embed
+        src={tallyUrl}
+        title="Alpha signup form"
+        loading="lazy"
+      />
+    ) : (
+      <div class="alpha-fallback">
+        <h2>{COPY.alpha.fallbackTitle}</h2>
+        <p class="muted">{COPY.alpha.fallbackBody}</p>
+        <p>
+          <a href={`mailto:${SITE.contactEmail}?subject=Alpha%20access`}>
+            {SITE.contactEmail}
+          </a>
+        </p>
+        <p class="muted" style="margin-top: 1.5rem; font-size: 0.875rem;">
+          Set <code>PUBLIC_TALLY_FORM_URL</code> in Cloudflare Pages to embed
+          your Tally form here.
+        </p>
+      </div>
+    )
+  }
+</div>
+
+<script>
+  document.querySelectorAll('[data-analytics="cta-alpha"]').forEach((el) => {
+    el.addEventListener("click", () => {
+      window.dispatchEvent(new CustomEvent("bw:analytics", { detail: "cta_click_alpha" }));
+    });
+  });
+</script>

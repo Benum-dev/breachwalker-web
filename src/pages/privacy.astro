@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../data/site";
+---
+
+<BaseLayout
+  meta={{
+    title: "Privacy Policy",
+    description: "Privacy policy for breachwalker.com and the Breachwalker closed alpha.",
+    path: "/privacy",
+  }}
+>
+  <header class="page-header">
+    <div class="container container--narrow">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: {SITE.legalUpdated}</p>
+    </div>
+  </header>
+
+  <article class="container container--narrow prose">
+    <p>
+      This policy describes how Breachwalker (“we”, “us”) collects and uses
+      information when you visit <a href={SITE.url}>breachwalker.com</a> or sign
+      up for the closed alpha.
+    </p>
+
+    <h2>Information we collect</h2>
+    <ul>
+      <li>
+        <strong>Alpha signup:</strong> email address and optional Discord handle
+        when you submit the waitlist form.
+      </li>
+      <li>
+        <strong>Analytics:</strong> aggregated page views, referrers, country,
+        and device type via Cloudflare Web Analytics (no advertising cookies in
+        the default configuration).
+      </li>
+      <li>
+        <strong>Contact:</strong> information you send us by email.
+      </li>
+    </ul>
+
+    <h2>How we use information</h2>
+    <ul>
+      <li>Send alpha invitations and product updates you opt into.</li>
+      <li>Understand site traffic and improve the marketing site.</li>
+      <li>Respond to support requests.</li>
+    </ul>
+
+    <h2>Third parties</h2>
+    <p>We use service providers that process data on our behalf:</p>
+    <ul>
+      <li>
+        <strong>Cloudflare</strong> — hosting, DNS, and web analytics.
+      </li>
+      <li>
+        <strong>Tally</strong> (or similar form provider) — alpha signup form
+        hosting, if enabled.
+      </li>
+    </ul>
+    <p>We do not sell your personal information.</p>
+
+    <h2>Retention</h2>
+    <p>
+      Alpha signup data is kept until you unsubscribe, we close the waitlist, or
+      a reasonable period after the alpha ends — whichever comes first. Analytics
+      data is retained according to our analytics provider’s policies.
+    </p>
+
+    <h2>Your rights</h2>
+    <p>
+      Depending on where you live, you may have rights to access, correct, or
+      delete your personal data. Contact us at
+      <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a>.
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      Breachwalker is not directed at children under 13. We do not knowingly
+      collect data from children.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      We may update this policy. The “Last updated” date at the top will change
+      when we do.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions: <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a>
+    </p>
+  </article>
+</BaseLayout>

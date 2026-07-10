@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /faq
+Allow: /alpha
+Allow: /privacy
+Allow: /terms
+
+Sitemap: https://breachwalker.com/sitemap-index.xml

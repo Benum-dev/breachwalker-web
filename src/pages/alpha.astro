@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AlphaSignup from "../components/AlphaSignup.astro";
+import { COPY } from "../data/copy";
+import { SITE } from "../data/site";
+---
+
+<BaseLayout
+  meta={{
+    title: "Alpha access",
+    description:
+      "Request closed alpha access to Breachwalker — block-derived expedition survival.",
+    path: "/alpha",
+  }}
+>
+  <header class="page-header">
+    <div class="container container--narrow">
+      <p class="eyebrow">Closed alpha</p>
+      <h1>{COPY.alpha.title}</h1>
+      <p class="muted">{COPY.alpha.intro}</p>
+    </div>
+  </header>
+
+  <section class="container container--narrow" style="padding-bottom: 4.5rem;">
+    <AlphaSignup />
+    <p class="muted" style="margin-top: 1.5rem; font-size: 0.875rem;">
+      By signing up you agree to our <a href="/privacy">Privacy Policy</a> and
+      <a href="/terms">Terms of Service</a>.
+    </p>
+  </section>
+</BaseLayout>
+
+<script is:inline define:vars={{ contactEmail: SITE.contactEmail }}>
+  const emailField = document.querySelector('input[type="email"]');
+  emailField?.addEventListener("focus", () => {
+    window.dispatchEvent(
+      new CustomEvent("bw:analytics", { detail: "alpha_signup_start" }),
+    );
+  });
+</script>

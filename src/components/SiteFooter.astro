@@ -1,0 +1,70 @@
+---
+import { COPY } from "../data/copy";
+import { SITE } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="site-footer__name">{SITE.name}</p>
+      <p class="site-footer__tagline muted">{COPY.footer.tagline}</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Footer">
+      <a href="/faq">FAQ</a>
+      <a href="/alpha">Alpha access</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+    </nav>
+    <p class="site-footer__copy muted">
+      © {year} {SITE.name}. {COPY.footer.rights}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border-subtle);
+    padding: var(--space-2xl) 0;
+    margin-top: auto;
+  }
+
+  .site-footer__inner {
+    display: grid;
+    gap: var(--space-xl);
+  }
+
+  .site-footer__name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    margin: 0 0 var(--space-xs);
+  }
+
+  .site-footer__tagline {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  .site-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-lg);
+  }
+
+  .site-footer__nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+
+  .site-footer__nav a:hover {
+    color: var(--color-text);
+  }
+
+  .site-footer__copy {
+    margin: 0;
+    font-size: 0.8125rem;
+  }
+</style>

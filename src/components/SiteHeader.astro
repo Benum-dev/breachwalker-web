@@ -1,0 +1,97 @@
+---
+import { COPY } from "../data/copy";
+import { SITE } from "../data/site";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/" aria-label={`${SITE.name} home`}>
+      <span class="site-logo__mark" aria-hidden="true">◈</span>
+      <span class="site-logo__text">{SITE.name}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a
+        class:list={["site-nav__link", { "is-active": currentPath === "/faq" }]}
+        href="/faq"
+      >
+        {COPY.nav.faq}
+      </a>
+      <a
+        class="btn btn--primary site-nav__cta"
+        href="/alpha"
+        data-analytics="cta-alpha"
+      >
+        {COPY.nav.alpha}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--color-border-subtle);
+    background: rgba(10, 12, 15, 0.88);
+    backdrop-filter: blur(12px);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    min-height: 4rem;
+  }
+
+  .site-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .site-logo:hover {
+    color: var(--color-text);
+  }
+
+  .site-logo__mark {
+    color: var(--color-accent);
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .site-nav__link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link.is-active {
+    color: var(--color-text);
+  }
+
+  .site-nav__cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 480px) {
+    .site-nav__link {
+      display: none;
+    }
+  }
+</style>
