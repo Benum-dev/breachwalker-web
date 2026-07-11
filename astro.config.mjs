@@ -20,6 +20,7 @@ const PAGE_PRIORITY = {
 // https://astro.build/config
 export default defineConfig({
   site: SITE,
+  trailingSlash: "always",
   integrations: [
     sitemap({
       filter: (page) => !page.includes("/404"),

@@ -42,7 +42,9 @@ export type PageMeta = {
 
 export function pageUrl(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${SITE.url}${normalized === "/" ? "" : normalized}`;
+  if (normalized === "/") return SITE.url;
+  const withSlash = normalized.endsWith("/") ? normalized : `${normalized}/`;
+  return `${SITE.url}${withSlash}`;
 }
 
 export function pageTitle(title: string): string {
