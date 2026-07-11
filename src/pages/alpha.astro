@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AlphaSignup from "../components/AlphaSignup.astro";
 import { COPY } from "../data/copy";
-import { SITE } from "../data/site";
+import { SITE, pagePath } from "../data/site";
 import { breadcrumbJsonLd, webPageJsonLd } from "../data/structured-data";
 
 const jsonLd = [
@@ -45,8 +45,8 @@ const jsonLd = [
   <section class="container container--narrow" style="padding-bottom: 4.5rem;">
     <AlphaSignup />
     <p class="muted" style="margin-top: 1.5rem; font-size: 0.875rem;">
-      By signing up you agree to our <a href="/privacy">Privacy Policy</a> and
-      <a href="/terms">Terms of Service</a>.
+      By signing up you agree to our <a href={pagePath("/privacy")}>Privacy Policy</a> and
+      <a href={pagePath("/terms")}>Terms of Service</a>.
     </p>
   </section>
 </BaseLayout>

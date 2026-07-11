@@ -1,6 +1,6 @@
 ---
 import { COPY } from "../data/copy";
-import { SITE } from "../data/site";
+import { SITE, pagePath } from "../data/site";
 
 const currentPath = Astro.url.pathname;
 ---
@@ -14,13 +14,13 @@ const currentPath = Astro.url.pathname;
     <nav class="site-nav" aria-label="Primary">
       <a
         class:list={["site-nav__link", { "is-active": currentPath === "/faq" }]}
-        href="/faq"
+        href={pagePath("/faq")}
       >
         {COPY.nav.faq}
       </a>
       <a
         class="btn btn--primary site-nav__cta"
-        href="/alpha"
+        href={pagePath("/alpha")}
         data-analytics="cta-alpha"
       >
         {COPY.nav.alpha}

@@ -1,5 +1,6 @@
 ---
 import { COPY } from "../data/copy";
+import { pagePath } from "../data/site";
 ---
 
 <section class="hero">
@@ -9,10 +10,10 @@ import { COPY } from "../data/copy";
     <h1>{COPY.hero.title}</h1>
     <p class="hero__subhead muted">{COPY.hero.subhead}</p>
     <div class="hero__actions">
-      <a class="btn btn--primary" href="/alpha" data-analytics="cta-alpha">
+      <a class="btn btn--primary" href={pagePath("/alpha")} data-analytics="cta-alpha">
         {COPY.hero.ctaPrimary}
       </a>
-      <a class="btn btn--ghost" href="/how-it-works">
+      <a class="btn btn--ghost" href={pagePath("/how-it-works")}>
         {COPY.hero.ctaSecondary}
       </a>
     </div>

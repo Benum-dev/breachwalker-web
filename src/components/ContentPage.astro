@@ -5,6 +5,7 @@ import {
   breadcrumbJsonLd,
   webPageJsonLd,
 } from "../data/structured-data";
+import { pagePath } from "../data/site";
 
 interface Props {
   page: SeoPage;
@@ -13,13 +14,16 @@ interface Props {
 const { page } = Astro.props;
 
 const defaultRelated = [
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
-  { href: "/item-economy", label: "Item economy" },
-  { href: "/alpha", label: "Alpha access" },
+  { href: pagePath("/how-it-works"), label: "How it works" },
+  { href: pagePath("/bitcoin-rifts"), label: "Bitcoin rifts" },
+  { href: pagePath("/item-economy"), label: "Item economy" },
+  { href: pagePath("/alpha"), label: "Alpha access" },
 ];
 
-const related = page.relatedLinks ?? defaultRelated;
+const related = (page.relatedLinks ?? defaultRelated).map((link) => ({
+  ...link,
+  href: pagePath(link.href),
+}));
 
 const jsonLd = [
   webPageJsonLd({
@@ -75,10 +79,10 @@ const jsonLd = [
       ))
     }
     <p class="seo-page__cta">
-      <a class="btn btn--primary" href="/alpha" data-analytics="cta-alpha">
+      <a class="btn btn--primary" href={pagePath("/alpha")} data-analytics="cta-alpha">
         {page.ctaLabel ?? "Request alpha access"}
       </a>
-      <a class="btn btn--ghost" href="/faq">Read FAQ</a>
+      <a class="btn btn--ghost" href={pagePath("/faq")}>Read FAQ</a>
     </p>
     <nav class="seo-related muted" aria-label="Related pages">
       <span>Related:</span>

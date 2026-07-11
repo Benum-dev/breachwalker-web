@@ -1,22 +1,24 @@
 ---
+import { pagePath } from "../data/site";
+
 const cards = [
   {
     label: "Gamers",
     title: "Extraction survival",
     body: "Stamina pressure, kit packing, extract-or-collapse — rifts that punish greed.",
-    href: "/extraction-survival-game",
+    href: pagePath("/extraction-survival-game"),
   },
   {
     label: "Bitcoin natives",
     title: "Rifts from chain history",
     body: "Deterministic worlds seeded from on-chain data — halving weight, fee danger, atlas growth.",
-    href: "/bitcoin-rifts",
+    href: pagePath("/bitcoin-rifts"),
   },
   {
     label: "Item economy",
     title: "Loot, craft, trade",
     body: "Grind gear in rifts. Marketplace and utility NFTs on Base — on the roadmap.",
-    href: "/item-economy",
+    href: pagePath("/item-economy"),
   },
 ] as const;
 ---

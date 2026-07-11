@@ -47,6 +47,13 @@ export function pageUrl(path: string): string {
   return `${SITE.url}${withSlash}`;
 }
 
+/** Internal hrefs — always trailing slash (matches canonical + sitemap). */
+export function pagePath(path: string): string {
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  if (normalized === "/") return "/";
+  return normalized.endsWith("/") ? normalized : `${normalized}/`;
+}
+
 export function pageTitle(title: string): string {
   return title === SITE.name ? SITE.name : `${title} · ${SITE.name}`;
 }

@@ -1,4 +1,5 @@
 ---
+import { pagePath } from "../data/site";
 ---
 
 <section class="what-is">
@@ -17,13 +18,13 @@
       item NFTs on Base join the picture.
     </p>
     <p class="what-is__links muted">
-      <a href="/how-it-works">How the breach loop works</a>
+      <a href={pagePath("/how-it-works")}>How the breach loop works</a>
       ·
-      <a href="/bitcoin-rifts">Bitcoin-derived rifts</a>
+      <a href={pagePath("/bitcoin-rifts")}>Bitcoin-derived rifts</a>
       ·
-      <a href="/extraction-survival-game">Extraction survival</a>
+      <a href={pagePath("/extraction-survival-game")}>Extraction survival</a>
       ·
-      <a href="/item-economy">Item economy</a>
+      <a href={pagePath("/item-economy")}>Item economy</a>
     </p>
   </div>
 </section>

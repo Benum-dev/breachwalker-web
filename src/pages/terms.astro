@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SITE } from "../data/site";
+import { SITE, pagePath } from "../data/site";
 ---
 
 <BaseLayout
@@ -65,7 +65,7 @@ import { SITE } from "../data/site";
     <h2>Privacy</h2>
     <p>
       Our collection of personal data is described in the
-      <a href="/privacy">Privacy Policy</a>.
+      <a href={pagePath("/privacy")}>Privacy Policy</a>.
     </p>
 
     <h2>Changes</h2>

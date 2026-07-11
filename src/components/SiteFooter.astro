@@ -1,6 +1,6 @@
 ---
 import { COPY } from "../data/copy";
-import { SITE } from "../data/site";
+import { SITE, pagePath } from "../data/site";
 
 const year = new Date().getFullYear();
 ---
@@ -15,14 +15,14 @@ const year = new Date().getFullYear();
       </p>
     </div>
     <nav class="site-footer__nav" aria-label="Footer">
-      <a href="/extraction-survival-game">Extraction survival</a>
-      <a href="/how-it-works">How it works</a>
-      <a href="/bitcoin-rifts">Bitcoin rifts</a>
-      <a href="/item-economy">Item economy</a>
-      <a href="/faq">FAQ</a>
-      <a href="/alpha">Alpha access</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
+      <a href={pagePath("/extraction-survival-game")}>Extraction survival</a>
+      <a href={pagePath("/how-it-works")}>How it works</a>
+      <a href={pagePath("/bitcoin-rifts")}>Bitcoin rifts</a>
+      <a href={pagePath("/item-economy")}>Item economy</a>
+      <a href={pagePath("/faq")}>FAQ</a>
+      <a href={pagePath("/alpha")}>Alpha access</a>
+      <a href={pagePath("/privacy")}>Privacy</a>
+      <a href={pagePath("/terms")}>Terms</a>
       <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
     </nav>
     <p class="site-footer__copy muted">

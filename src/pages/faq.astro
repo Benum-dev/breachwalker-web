@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { FAQ_SECTIONS } from "../data/faq";
 import { breadcrumbJsonLd } from "../data/structured-data";
+import { pagePath } from "../data/site";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -74,7 +75,7 @@ const jsonLd = [
       ))
     }
     <p class="faq-cta">
-      <a class="btn btn--primary" href="/alpha" data-analytics="cta-alpha">
+      <a class="btn btn--primary" href={pagePath("/alpha")} data-analytics="cta-alpha">
         Request alpha access
       </a>
     </p>
