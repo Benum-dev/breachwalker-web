@@ -12,7 +12,7 @@ export const SITE = {
   /** Until breachwalker.com mail exists — single inbox for contact & privacy */
   contactEmail: "breachwalker@benumlabs.com",
   privacyEmail: "breachwalker@benumlabs.com",
-  ogImage: "/og/og-default.svg",
+  ogImage: "/og/og-default.png",
   /** Set via PUBLIC_CF_WEB_ANALYTICS_TOKEN in Cloudflare Pages env */
   cfWebAnalyticsToken: import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN ?? "",
   /** Tally embed URL — override via PUBLIC_TALLY_FORM_URL env */
@@ -35,6 +35,8 @@ export type PageMeta = {
   title: string;
   description: string;
   path: string;
+  ogImage?: string;
+  ogImageAlt?: string;
   noindex?: boolean;
 };
 

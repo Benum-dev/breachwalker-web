@@ -8,7 +8,7 @@
   </defs>
   <rect width="1200" height="630" fill="url(#glow)"/>
   <text x="600" y="260" text-anchor="middle" fill="#e8ecf1" font-family="Georgia, serif" font-size="72" font-weight="600">Breachwalker</text>
-  <text x="600" y="340" text-anchor="middle" fill="#9aa5b5" font-family="system-ui, sans-serif" font-size="34">Cross the breach.</text>
+  <text x="600" y="340" text-anchor="middle" fill="#9aa5b5" font-family="system-ui, sans-serif" font-size="34">The breach loop</text>
   <path d="M600 400 L640 450 L600 500 L560 450 Z" stroke="#d4a24a" stroke-width="3" fill="none"/>
   <text x="600" y="580" text-anchor="middle" fill="#5c6675" font-family="system-ui, sans-serif" font-size="22">breachwalker.com</text>
 </svg>

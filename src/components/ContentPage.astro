@@ -1,12 +1,37 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import type { SeoPage } from "../data/seo-pages";
+import {
+  breadcrumbJsonLd,
+  webPageJsonLd,
+} from "../data/structured-data";
 
 interface Props {
   page: SeoPage;
 }
 
 const { page } = Astro.props;
+
+const defaultRelated = [
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
+  { href: "/item-economy", label: "Item economy" },
+  { href: "/alpha", label: "Alpha access" },
+];
+
+const related = page.relatedLinks ?? defaultRelated;
+
+const jsonLd = [
+  webPageJsonLd({
+    name: page.title,
+    description: page.metaDescription,
+    path: page.path,
+  }),
+  breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: page.title, path: page.path },
+  ]),
+];
 ---
 
 <BaseLayout
@@ -14,10 +39,17 @@ const { page } = Astro.props;
     title: page.metaTitle,
     description: page.metaDescription,
     path: page.path,
+    ogImageAlt: `${page.metaTitle} — Breachwalker`,
   }}
+  jsonLd={jsonLd}
 >
   <header class="page-header">
     <div class="container container--narrow">
+      <nav class="breadcrumb muted" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true"> / </span>
+        <span>{page.title}</span>
+      </nav>
       <p class="eyebrow">{page.eyebrow}</p>
       <h1>{page.title}</h1>
       <p class="muted lead">{page.intro}</p>
@@ -50,15 +82,28 @@ const { page } = Astro.props;
     </p>
     <nav class="seo-related muted" aria-label="Related pages">
       <span>Related:</span>
-      <a href="/how-it-works">How it works</a>
-      <a href="/bitcoin-rifts">Bitcoin rifts</a>
-      <a href="/item-economy">Item economy</a>
-      <a href="/alpha">Alpha access</a>
+      {related.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
     </nav>
   </article>
 </BaseLayout>
 
 <style>
+  .breadcrumb {
+    font-size: 0.8125rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-text);
+  }
+
   .lead {
     font-size: 1.125rem;
     line-height: 1.65;

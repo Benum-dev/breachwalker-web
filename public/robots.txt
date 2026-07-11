@@ -1,11 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /faq
-Allow: /alpha
-Allow: /privacy
-Allow: /terms
-Allow: /bitcoin-rifts
-Allow: /item-economy
-Allow: /extraction-survival-game
 
 Sitemap: https://breachwalker.com/sitemap-index.xml

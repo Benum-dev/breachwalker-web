@@ -3,16 +3,21 @@ import "../styles/global.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import AnalyticsBeacon from "../components/AnalyticsBeacon.astro";
+import JsonLd from "../components/JsonLd.astro";
+import { ogImagePath } from "../data/og-images";
 import { SITE, pageTitle, pageUrl, type PageMeta } from "../data/site";
 
 interface Props {
   meta: PageMeta;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { meta } = Astro.props;
+const { meta, jsonLd } = Astro.props;
 const title = pageTitle(meta.title);
 const canonical = pageUrl(meta.path);
-const ogImage = new URL(SITE.ogImage, SITE.url).href;
+const ogImageRel = meta.ogImage ?? ogImagePath(meta.path);
+const ogImage = new URL(ogImageRel, SITE.url).href;
+const ogImageAlt = meta.ogImageAlt ?? `${meta.title} — ${SITE.name}`;
 const robots = meta.noindex ? "noindex, nofollow" : "index, follow";
 ---
 
@@ -33,14 +38,19 @@ const robots = meta.noindex ? "noindex, nofollow" : "index, follow";
     <meta property="og:description" content={meta.description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={meta.description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <meta name="theme-color" content="#0a0c0f" />
+    {jsonLd && <JsonLd data={jsonLd} />}
     <AnalyticsBeacon />
   </head>
   <body>

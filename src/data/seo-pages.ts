@@ -4,6 +4,11 @@ export type SeoSection = {
   bullets?: string[];
 };
 
+export type RelatedLink = {
+  href: string;
+  label: string;
+};
+
 export type SeoPage = {
   path: string;
   metaTitle: string;
@@ -13,6 +18,7 @@ export type SeoPage = {
   intro: string;
   sections: SeoSection[];
   ctaLabel?: string;
+  relatedLinks?: RelatedLink[];
 };
 
 export const SEO_PAGES: Record<string, SeoPage> = {
@@ -60,6 +66,12 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       },
     ],
     ctaLabel: "Request alpha access",
+    relatedLinks: [
+      { href: "/how-it-works", label: "How it works" },
+      { href: "/item-economy", label: "Item economy" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/alpha", label: "Alpha access" },
+    ],
   },
   "item-economy": {
     path: "/item-economy",
@@ -129,6 +141,12 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       },
     ],
     ctaLabel: "Join the alpha list",
+    relatedLinks: [
+      { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
+      { href: "/extraction-survival-game", label: "Extraction survival" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/alpha", label: "Alpha access" },
+    ],
   },
   "how-it-works": {
     path: "/how-it-works",
@@ -166,6 +184,12 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       },
     ],
     ctaLabel: "Request alpha access",
+    relatedLinks: [
+      { href: "/extraction-survival-game", label: "Extraction survival" },
+      { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/alpha", label: "Alpha access" },
+    ],
   },
   "extraction-survival-game": {
     path: "/extraction-survival-game",
@@ -210,5 +234,11 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       },
     ],
     ctaLabel: "Request alpha access",
+    relatedLinks: [
+      { href: "/how-it-works", label: "How it works" },
+      { href: "/item-economy", label: "Item economy" },
+      { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
+      { href: "/faq", label: "FAQ" },
+    ],
   },
 };

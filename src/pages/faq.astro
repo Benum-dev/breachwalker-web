@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { FAQ_SECTIONS } from "../data/faq";
+import { breadcrumbJsonLd } from "../data/structured-data";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -16,6 +17,14 @@ const faqJsonLd = {
     })),
   ),
 };
+
+const jsonLd = [
+  faqJsonLd,
+  breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "FAQ", path: "/faq" },
+  ]),
+];
 ---
 
 <BaseLayout
@@ -24,12 +33,17 @@ const faqJsonLd = {
     description:
       "Frequently asked questions about Breachwalker — rifts, breaches, Strikes, NFT roadmap on Base, and the closed alpha.",
     path: "/faq",
+    ogImageAlt: "Breachwalker FAQ — pay to win, Strikes, NFT roadmap",
   }}
+  jsonLd={jsonLd}
 >
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-
   <header class="page-header">
     <div class="container container--narrow">
+      <nav class="breadcrumb muted" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true"> / </span>
+        <span>FAQ</span>
+      </nav>
       <p class="eyebrow">Support</p>
       <h1>Frequently asked questions</h1>
       <p class="muted">
@@ -70,6 +84,20 @@ const faqJsonLd = {
 <style>
   .faq-page {
     padding-bottom: var(--space-4xl);
+  }
+
+  .breadcrumb {
+    font-size: 0.8125rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-text);
   }
 
   .faq-section {
