@@ -81,7 +81,20 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         title: "Marketplace (planned)",
         paragraphs: [
-          "A player marketplace is planned for trading crafted gear and rare reagents. Buyers pay in Strikes; sellers receive net proceeds after platform tax. Strikes enter circulation through fiat purchase or by selling items — not from merely playing a rift.",
+          "A player marketplace is planned for trading crafted gear and rare reagents. Buyers pay in Strikes; sellers receive net proceeds after platform tax.",
+          "Strikes are the only currency — no premium token for spenders. Free-to-play walkers earn Strikes by selling gameplay loot to other players, the same economic path as fiat buyers who then spend those Strikes on your listings.",
+        ],
+      },
+      {
+        title: "Fair play — not pay to win",
+        paragraphs: [
+          "Every item that matters in rifts is intended to come from breaches, workshop fabrication, or player trade — not from a cash-only gear tab. There is no VIP currency pool. Spending real money buys Strikes faster; it does not mint exclusive tier loot you cannot earn in play.",
+        ],
+        bullets: [
+          "Gameplay earns items — breaches and crafting, not login rewards",
+          "One currency — Strikes only, for marketplace settlement",
+          "F2P viable — sell items on the in-game marketplace to receive Strikes from buyers",
+          "No premium-only gear track planned",
         ],
       },
       {
@@ -149,6 +162,50 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         title: "4. Workshop and keys",
         paragraphs: [
           "Reagents from rifts feed the workshop. Fabricate anchor spikes to open sealed rifts on the atlas, breach keys to re-enter, and healing stock for the next run.",
+        ],
+      },
+    ],
+    ctaLabel: "Request alpha access",
+  },
+  "extraction-survival-game": {
+    path: "/extraction-survival-game",
+    metaTitle: "Extraction Survival Game",
+    metaDescription:
+      "Breachwalker is a web-first extraction survival game — stamina pressure, kit packing, loot risk, and extract-or-collapse runs in Bitcoin-derived rifts. Closed alpha signup.",
+    eyebrow: "For gamers",
+    title: "Extraction survival in derived rifts",
+    intro:
+      "If you want the extract-or-lose-it tension of extraction shooters without the squad FPS wrapper — stamina, greed, and gear risk in single-player rifts — Breachwalker is built around that loop.",
+    sections: [
+      {
+        title: "The extraction loop",
+        paragraphs: [
+          "Pack your expedition kit on the surface. Breach a rift. Push deeper while stamina drains. Extract to bank loot in the vault, or collapse and wake on the surface with what you kept.",
+          "Unbanked loot is at risk if you are lost in the breach. The decision is always: push for one more room, or extract while you still can.",
+        ],
+      },
+      {
+        title: "Not a character wipe",
+        paragraphs: [
+          "Death is not permadeath for your walker. You lose what you carried unbanked; worn gear returns with a durability hit. The vault on the surface is your long-term progress.",
+        ],
+      },
+      {
+        title: "How this differs from extraction shooters",
+        paragraphs: [
+          "Breachwalker is expedition survival in procedurally derived rifts — not a tactical military sim. No squad voice chat in alpha. Bitcoin on-chain history seeds each rift's danger and scale, so two catalog entries can play nothing alike.",
+        ],
+        bullets: [
+          "Stamina and collapse — not only ballistics TTK",
+          "Workshop fabrication — reagents and formulas between runs",
+          "Rift ledger — choose destinations from the atlas, not a matchmaking queue",
+          "Web-first browser play — closed alpha signup open now",
+        ],
+      },
+      {
+        title: "Fair play for free players",
+        paragraphs: [
+          "Gear comes from gameplay. There is no premium currency track — Strikes settle marketplace trades, and free-to-play walkers can earn Strikes by selling items they extracted and crafted. No pay-to-win gear sheet.",
         ],
       },
     ],

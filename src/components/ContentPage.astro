@@ -46,10 +46,15 @@ const { page } = Astro.props;
       <a class="btn btn--primary" href="/alpha" data-analytics="cta-alpha">
         {page.ctaLabel ?? "Request alpha access"}
       </a>
-      <a class="btn btn--ghost" href="/faq" style="margin-left: 0.75rem;">
-        Read FAQ
-      </a>
+      <a class="btn btn--ghost" href="/faq">Read FAQ</a>
     </p>
+    <nav class="seo-related muted" aria-label="Related pages">
+      <span>Related:</span>
+      <a href="/how-it-works">How it works</a>
+      <a href="/bitcoin-rifts">Bitcoin rifts</a>
+      <a href="/item-economy">Item economy</a>
+      <a href="/alpha">Alpha access</a>
+    </nav>
   </article>
 </BaseLayout>
 
@@ -64,5 +69,23 @@ const { page } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-md);
+  }
+
+  .seo-related {
+    margin-top: var(--space-xl);
+    font-size: 0.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+    align-items: center;
+  }
+
+  .seo-related a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .seo-related a:hover {
+    color: var(--color-text);
   }
 </style>

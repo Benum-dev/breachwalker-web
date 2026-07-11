@@ -35,9 +35,24 @@ export const FAQ_SECTIONS: FaqSection[] = [
           "You are lost in the breach — unbanked loot stays behind. Worn gear and what you already extracted to the vault return to the surface. Stamina collapse drags you back without a character wipe.",
       },
       {
+        question: "Is there permadeath?",
+        answer:
+          "No character wipe. Death in a rift costs unbanked loot and durability on worn gear — not your account or everything you ever extracted. Bank to the vault on the surface between breaches.",
+      },
+      {
+        question: "Is Breachwalker like Escape from Tarkov?",
+        answer:
+          "Similar tension — high-stakes extraction, gear risk, greed punished — but Breachwalker is web-first expedition survival in Bitcoin-derived rifts, not a military shooter. Single-player in alpha; stamina and collapse replace some of the shooter pacing.",
+      },
+      {
         question: "Is Breachwalker multiplayer?",
         answer:
           "The alpha is single-player. A shared atlas tracks which rifts walkers have charted worldwide; synchronous co-op or PvP is not part of the current scope.",
+      },
+      {
+        question: "Will Breachwalker add multiplayer?",
+        answer:
+          "Not on the alpha roadmap. The shared atlas is asynchronous — other walkers chart rifts, but you do not squad up in the same breach instance today.",
       },
     ],
   },
@@ -79,7 +94,22 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What are Strikes?",
         answer:
-          "Strikes are the sole settlement currency for player-to-player trade on the marketplace. Breaches drop items and reagents, not Strikes. You obtain Strikes through fiat purchase or by selling items to other players (buyer pays; seller receives net after platform tax).",
+          "Strikes are the sole currency — one pool for everyone, with no separate premium currency locked behind spending. Breaches drop items and reagents, not Strikes. You obtain Strikes by selling items on the in-game marketplace (buyer pays; seller receives net after platform tax) or through fiat purchase. Free-to-play walkers can earn Strikes the same way as anyone else: gameplay loot → marketplace sale.",
+      },
+      {
+        question: "Is Breachwalker pay to win?",
+        answer:
+          "No pay-to-win design. All gear and reagents are earned through gameplay — breaches, crafting, and extraction. There is no premium currency only spenders can access. Strikes are the single settlement currency, and free-to-play players can obtain Strikes by selling items other walkers buy on the in-game marketplace. Spending fiat is a shortcut to Strikes, not a gate on the best loot.",
+      },
+      {
+        question: "Is there a premium currency or VIP-only gear?",
+        answer:
+          "No. Breachwalker uses one currency — Strikes — for marketplace settlement. There is no second premium token, no battle pass-only mythic tier, and no cash-only gear sheet. If it equips in a rift, the intended path is earn it in play, fabricate it in the workshop, or buy it from another player with Strikes you earned or bought.",
+      },
+      {
+        question: "Can free-to-play players compete?",
+        answer:
+          "Yes. Gameplay is how items enter the economy. A free-to-play walker can extract reagents, fabricate gear, sell on the marketplace, and receive Strikes from buyers — then buy other players' items without ever spending fiat. Skill in the breach loop and crafting choices matter more than whether you topped up Strikes with money.",
       },
       {
         question: "Can I earn money by playing?",
@@ -126,6 +156,16 @@ export const FAQ_SECTIONS: FaqSection[] = [
         question: "What about Bitcoin Ordinals?",
         answer:
           "Ordinals-era holder partnerships (recognition items, soulbound rewards, bonus rifts tied to historic mints) are planned separately from the Base asset bridge. Verification would use a Bitcoin-aware indexer, not the same pipeline as EVM NFT custody.",
+      },
+      {
+        question: "Are NFTs pay to win?",
+        answer:
+          "No. NFTs are an export format for gear you already earned in gameplay — bridge out a item you extracted and crafted, trade it externally, bridge it back if you want it functional again. There is no loot box of on-chain mythics only whales can mint. Utility in rifts is the design bar, not speculative rarity alone.",
+      },
+      {
+        question: "When will NFTs and OpenSea trading go live?",
+        answer:
+          "After the breach loop and in-game marketplace prove out in live play. Base is the target chain for tradeable item NFTs; external marketplaces like OpenSea depend on bridge launch and collection deployment — not part of closed alpha.",
       },
     ],
   },
