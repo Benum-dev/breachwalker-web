@@ -97,6 +97,19 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         ],
       },
       {
+        title: "Legendary, mythic, and one-of-one finds",
+        paragraphs: [
+          "At the top of the loot ladder sit legendary, mythic, and one-of-one items — the drops worth chasing in harsh rifts. Legendary and mythic pieces can occupy fixed coordinates inside a rift: every walker maps to the same spot, and the first walker to extract one claims it on the shared global atlas. That coordinate is spent for the world.",
+          "One-of-one sits above mythic — a single global instance, not a fungible stack. These atlas-recorded finds carry provenance collectors care about: catalog entry, rift era, who claimed it first. They are the items designed to bridge out as non-fungible NFTs, because each represents a unique slice of world history.",
+        ],
+        bullets: [
+          "Legendary / mythic — fixed coordinates; first global extract wins on the atlas",
+          "One-of-one — rarest tier; single global instance per find",
+          "Routine loot (common–rare) — personal drops, not atlas-locked SOT claims",
+          "Bridge targets — legendary+ gear exported as unique NFTs on Base (roadmap)",
+        ],
+      },
+      {
         title: "The player marketplace",
         paragraphs: [
           "A walker-to-walker marketplace is planned for crafted gear, rare reagents, and high-tier extractions. You set a price in Strikes; buyers pay; you receive net proceeds after a platform fee. Free-to-play walkers use the same marketplace as everyone else — sell loot other players want, spend the Strikes you earn on their listings.",
@@ -146,8 +159,8 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         title: "Utility-first NFTs and OpenSea trading",
         paragraphs: [
-          "Exported gear is designed to stay meaningful inside rifts when you bridge it back — stats tied to what you extracted and crafted, not a JPEG with a game reskin. A mythic blade should change what you can survive, not just trend on a leaderboard.",
-          "After the bridge launches, the intended path is: earn gear in a rift → bridge out to Base → list on OpenSea or another NFT marketplace → buyer acquires the on-chain item. You can bridge a different piece back in when you want functional loadout gear again.",
+          "Exported gear is designed to stay meaningful inside rifts when you bridge it back — stats tied to what you extracted and crafted, not a JPEG with a game reskin. Bridge candidates are legendary, mythic, and one-of-one items: globally unique atlas finds where provenance is the story.",
+          "After the bridge launches, the intended path is: claim a top-tier find in a rift → bridge out to Base as a non-fungible NFT → list on OpenSea or another marketplace → buyer acquires that specific instance. Bridge a different piece back in when you want functional loadout gear again. Stackable common-to-rare loot stays in-game.",
         ],
       },
       {

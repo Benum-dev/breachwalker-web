@@ -48,6 +48,16 @@ export const FAQ_SECTIONS: FaqSection[] = [
           "The atlas is the shared global registry of charted rifts — which expedition spaces walkers worldwide have mapped. Your personal rift ledger shows what you can breach today: open routes, sealed rifts waiting on anchor spikes, and rifts you have already run. Virgin rifts grow the atlas for everyone when a walker extracts for the first time.",
       },
       {
+        question: "What are legendary, mythic, and one-of-one items?",
+        answer:
+          "Top-tier rarity bands above routine loot. Legendary and mythic items can sit at fixed coordinates inside a rift — predetermined locations every walker maps to the same place. One-of-one is the rarest tier above mythic: a single global instance tied to a specific find, not a stack of duplicates. These are the drops collectors chase and the items designed for NFT bridge export, because each carries real provenance.",
+      },
+      {
+        question: "How does the global atlas track legendary and mythic finds?",
+        answer:
+          "Legendary and mythic items at fixed coordinates are globally unique on the shared atlas. The first walker to extract one claims it for the world — recorded on the atlas so every other walker knows that coordinate is spent. One-of-one global claims follow the same first-find-wins model on the roadmap. Routine gear below legendary still drops from personal encounters and is not atlas-locked at a single world coordinate. Full global claim authority ships with the live cloud atlas; the closed alpha focuses on the breach loop first.",
+      },
+      {
         question: "What happens when I die in a rift?",
         answer:
           "You are lost in the breach — anything you carried unbanked stays behind. Gear already in your vault on the surface is safe. Worn equipment returns with a durability hit. Run out of stamina and you collapse instead: dragged to the surface with what you kept, without a full character wipe.",
@@ -180,6 +190,11 @@ export const FAQ_SECTIONS: FaqSection[] = [
         question: "Will Breachwalker have NFTs?",
         answer:
           "Yes. Utility-first item NFTs are on the roadmap. The goal is gear that stays meaningful inside rifts when you bridge it back — weapons and armor with stats tied to what you extracted and crafted, not JPEG collectibles with a reskin.",
+      },
+      {
+        question: "Which items can be bridged as NFTs?",
+        answer:
+          "Legendary, mythic, and one-of-one gear — the globally unique tiers tracked on the shared atlas. Each is a distinct instance with provenance: which rift, which catalog entry, often which fixed coordinate was claimed first. Routine common-to-rare loot is stackable gameplay gear and is not designed for NFT export. Bridge targets are the finds worth carrying off-chain because only one walker can own that world history.",
       },
       {
         question: "How does the asset bridge work?",
