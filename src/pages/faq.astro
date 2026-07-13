@@ -32,9 +32,9 @@ const jsonLd = [
   meta={{
     title: "FAQ",
     description:
-      "Frequently asked questions about Breachwalker — rifts, breaches, Strikes, NFT roadmap on Base, and the closed alpha.",
+      "Breachwalker FAQ — extraction survival, Bitcoin rifts, pay to win policy, free-to-play economy, player marketplace, earning through items, and NFT bridge on Base.",
     path: "/faq",
-    ogImageAlt: "Breachwalker FAQ — pay to win, Strikes, NFT roadmap",
+    ogImageAlt: "Breachwalker FAQ — extraction survival, marketplace, NFT bridge",
   }}
   jsonLd={jsonLd}
 >
@@ -48,8 +48,9 @@ const jsonLd = [
       <p class="eyebrow">Support</p>
       <h1>Frequently asked questions</h1>
       <p class="muted">
-        The breach loop, closed alpha access, and the roadmap for item economy
-        and NFTs — including what ships now versus later.
+        How breaching works, how to join the alpha, and how the item economy and
+        NFT bridge are designed — with straight answers on pay-to-win,
+        free-to-play, and earning through gameplay.
       </p>
     </div>
   </header>
@@ -61,6 +62,9 @@ const jsonLd = [
           <h2 id={`faq-${section.id}`} class="faq-section__title">
             {section.title}
           </h2>
+          {section.intro && (
+            <p class="faq-section__intro muted">{section.intro}</p>
+          )}
           <div class="faq-list">
             {section.entries.map((entry) => (
               <details class="faq-item">
@@ -77,6 +81,9 @@ const jsonLd = [
     <p class="faq-cta">
       <a class="btn btn--primary" href={pagePath("/alpha")} data-analytics="cta-alpha">
         Request alpha access
+      </a>
+      <a class="btn btn--ghost" href={pagePath("/item-economy")}>
+        Item economy
       </a>
     </p>
   </div>
@@ -116,11 +123,20 @@ const jsonLd = [
     border-bottom: 1px solid var(--color-border-subtle);
   }
 
+  .faq-section__intro {
+    margin: 0 0 var(--space-lg);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
   .faq-section .faq-list {
     padding: 0;
   }
 
   .faq-cta {
     margin-top: var(--space-xl);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
   }
 </style>
