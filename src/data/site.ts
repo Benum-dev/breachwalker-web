@@ -12,6 +12,7 @@ export const SITE = {
   /** Until breachwalker.com mail exists — single inbox for contact & privacy */
   contactEmail: "breachwalker@benumlabs.com",
   privacyEmail: "breachwalker@benumlabs.com",
+  discordInviteUrl: "https://discord.gg/HdaPWaAVV",
   ogImage: "/og/og-default.png",
   /** Set via PUBLIC_CF_WEB_ANALYTICS_TOKEN in Cloudflare Pages env */
   cfWebAnalyticsToken: import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN ?? "",

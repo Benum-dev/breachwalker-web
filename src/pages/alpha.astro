@@ -44,6 +44,12 @@ const jsonLd = [
 
   <section class="container container--narrow" style="padding-bottom: 4.5rem;">
     <AlphaSignup />
+    <div class="discord-callout">
+      <p class="muted">
+        Want announcements and build drops in one place?
+        <a href={SITE.discordInviteUrl} target="_blank" rel="noopener noreferrer">Join the Discord</a>.
+      </p>
+    </div>
     <p class="muted" style="margin-top: 1.5rem; font-size: 0.875rem;">
       By signing up you agree to our <a href={pagePath("/privacy")}>Privacy Policy</a> and
       <a href={pagePath("/terms")}>Terms of Service</a>.
@@ -64,6 +70,24 @@ const jsonLd = [
 
   .breadcrumb a:hover {
     color: var(--color-text);
+  }
+
+  .discord-callout {
+    margin-top: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-elevated);
+  }
+
+  .discord-callout a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .discord-callout a:hover {
+    color: var(--color-accent-hover);
   }
 </style>
 

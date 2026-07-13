@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { FAQ_SECTIONS } from "../data/faq";
 import { breadcrumbJsonLd } from "../data/structured-data";
-import { pagePath } from "../data/site";
+import { SITE, pagePath } from "../data/site";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -90,6 +90,9 @@ const jsonLd = [
       </a>
       <a class="btn btn--ghost" href={pagePath("/how-it-works")}>
         How it works
+      </a>
+      <a class="btn btn--ghost" href={SITE.discordInviteUrl} target="_blank" rel="noopener noreferrer">
+        Discord
       </a>
       <a class="btn btn--ghost" href={pagePath("/bitcoin-rifts")}>
         Why Bitcoin

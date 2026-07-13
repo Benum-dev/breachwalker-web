@@ -1,5 +1,5 @@
 /**
- * Generates 1200×630 PNG Open Graph images from SVG templates.
+ * Generates 1200×630 PNG Open Graph images.
  * Run automatically before `astro build` via npm prebuild.
  */
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -9,6 +9,7 @@ import sharp from "sharp";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "../public/og");
+const defaultSource = join(outDir, "source-website_with_text.png");
 
 const OG_PAGES = [
   { slug: "default", subtitle: "Cross the breach." },
@@ -50,6 +51,16 @@ function ogSvg(subtitle) {
 mkdirSync(outDir, { recursive: true });
 
 for (const page of OG_PAGES) {
+  if (page.slug === "default") {
+    // Default OG uses the latest concept banner (cropped to 1200×630).
+    await sharp(defaultSource)
+      .resize(1200, 630, { fit: "cover", position: "centre" })
+      .png()
+      .toFile(join(outDir, "og-default.png"));
+    console.log("og-default.png");
+    continue;
+  }
+
   const svg = ogSvg(page.subtitle);
   const pngPath = join(outDir, `og-${page.slug}.png`);
   await sharp(Buffer.from(svg)).png().toFile(pngPath);
