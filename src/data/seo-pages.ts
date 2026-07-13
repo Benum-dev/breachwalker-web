@@ -75,68 +75,92 @@ export const SEO_PAGES: Record<string, SeoPage> = {
   },
   "item-economy": {
     path: "/item-economy",
-    metaTitle: "Item Economy & NFT Roadmap",
+    metaTitle: "Item Economy, Marketplace & NFT Bridge",
     metaDescription:
-      "Breachwalker item economy: grind gear in rifts, craft in the workshop, trade on the marketplace. Utility-first NFTs on Base via asset bridge — roadmap, not alpha.",
-    eyebrow: "Roadmap",
-    title: "Items first. Strikes settle trades.",
+      "Breachwalker item economy: extract gear in rifts, craft in the workshop, sell on the player marketplace for Strikes, or bridge items to Base NFTs. Free-to-play friendly, no pay-to-win. Closed alpha signup.",
+    eyebrow: "Item economy",
+    title: "Loot, trade, and bridge what you earn",
     intro:
-      "Breachwalker is built around loot pressure inside rifts — not a token drip for logging in. Economic upside flows through items, crafting, and player trade. Strikes are settlement currency; NFTs extend items outward on Base when the bridge ships.",
+      "Breachwalker runs on items — gear and reagents you extract in rifts, fabricate in the workshop, and trade with other walkers. Strikes settle in-game deals. On the roadmap, bridge select loot to Base as utility NFTs and sell on external markets. The closed alpha proves the breach loop; marketplace and bridge follow.",
     sections: [
       {
-        title: "The loop today (alpha)",
+        title: "How the item economy works",
         paragraphs: [
-          "Breaches drop items and reagents — not Strikes. You fabricate breach keys and healing stock in the workshop, pack your expedition kit, and extract what you can before stamina collapses.",
-          "The alpha proves the breach loop is sticky before any marketplace or NFT export goes live.",
-        ],
-      },
-      {
-        title: "Marketplace (planned)",
-        paragraphs: [
-          "A player marketplace is planned for trading crafted gear and rare reagents. Buyers pay in Strikes; sellers receive net proceeds after platform tax.",
-          "Strikes are the only currency — no premium token for spenders. Free-to-play walkers earn Strikes by selling gameplay loot to other players, the same economic path as fiat buyers who then spend those Strikes on your listings.",
-        ],
-      },
-      {
-        title: "Fair play — not pay to win",
-        paragraphs: [
-          "Every item that matters in rifts is intended to come from breaches, workshop fabrication, or player trade — not from a cash-only gear tab. There is no VIP currency pool. Spending real money buys Strikes faster; it does not mint exclusive tier loot you cannot earn in play.",
+          "Every valuable item starts in gameplay. Breaches drop gear and reagents. The workshop turns reagents into breach keys, healing stock, and equipment. Walkers list surplus loot on the player marketplace or, on the roadmap, bridge high-tier pieces to tradeable NFTs on Base.",
+          "Economic upside flows from what you extract and how well you play — not from a daily login token. Rare drops from harsh rifts carry provenance collectors care about: which catalog entry they came from, what era of chain history shaped the rift.",
         ],
         bullets: [
-          "Gameplay earns items — breaches and crafting, not login rewards",
+          "Extract — gear and reagents drop inside rifts, not currency",
+          "Fabricate — workshop formulas turn reagents into keys, kits, and gear",
+          "Trade — marketplace listings settled in Strikes between walkers",
+          "Bridge — export earned gear to Base NFTs for external sale (roadmap)",
+        ],
+      },
+      {
+        title: "The player marketplace",
+        paragraphs: [
+          "A walker-to-walker marketplace is planned for crafted gear, rare reagents, and high-tier extractions. You set a price in Strikes; buyers pay; you receive net proceeds after a platform fee. Free-to-play walkers use the same marketplace as everyone else — sell loot other players want, spend the Strikes you earn on their listings.",
+          "Provenance matters for collector value. A mythic blade from a halving-era rift with a clear craft history can command more than generic gear. The marketplace launches after the breach loop proves sticky in live play.",
+        ],
+      },
+      {
+        title: "Earning through skilled play",
+        paragraphs: [
+          "Breachwalker is item-first soft P2E: returns come from valuable gear and smart play, not from showing up for a token drip. Two planned paths to real-world upside:",
+          "Sell on the in-game marketplace — extract loot, list it for Strikes, cash out through platform fiat rails when available. Bridge to NFT — export gear you earned to Base, list on OpenSea or another external market, sell to a collector. Bridge a different item back in when you want playable gear again.",
+          "Nothing is guaranteed. Prices depend on demand, rarity, and how deep you push in dangerous rifts. Marketplace and asset bridge are roadmap features; closed alpha testers focus on extraction and crafting only.",
+        ],
+      },
+      {
+        title: "Strikes — one currency for everyone",
+        paragraphs: [
+          "Strikes are Breachwalker’s sole settlement currency — one pool for every walker, with no separate premium token locked behind spending. You obtain Strikes by selling items on the marketplace or purchasing them with fiat. Breaches drop items and reagents, not Strikes.",
+          "Spending fiat is a shortcut to Strikes for marketplace convenience. It does not mint exclusive tier loot or bypass the breach loop. Free-to-play walkers earn Strikes by selling gameplay loot — the same economic path buyers use when they spend those Strikes on your listings.",
+        ],
+      },
+      {
+        title: "Free-to-play and no pay-to-win",
+        paragraphs: [
+          "Equippable gear is designed to come from breaches, workshop fabrication, or player trade — not a cash-only gear tab. There is no VIP currency pool, no battle-pass-only mythic track, and no whale-only loot crate on-chain.",
+          "A free-to-play walker can extract reagents, fabricate competitive kit, sell on the marketplace, and buy other players’ gear with Strikes earned from sales — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Strikes.",
+        ],
+        bullets: [
           "One currency — Strikes only, for marketplace settlement",
-          "F2P viable — sell items on the in-game marketplace to receive Strikes from buyers",
-          "No premium-only gear track planned",
+          "Gameplay earns items — breaches and crafting, not login rewards",
+          "F2P viable — sell extracted loot to earn Strikes from buyers",
+          "Fiat buys Strikes faster, not exclusive mythic gear",
         ],
       },
       {
         title: "Asset bridge on Base",
         paragraphs: [
-          "Tradeable item NFTs target Base — lower fees, mature marketplace tooling, and Coinbase Wallet paths that reduce seed-phrase friction for players new to crypto.",
-          "Bitcoin remains the substrate for rift generation. Base carries the tradeable representation of gear you choose to bridge out.",
+          "Tradeable item NFTs target Base for lower fees and mature marketplace tooling than minting everything on Bitcoin L1. Bitcoin remains the substrate for rift generation and lore; Base carries the tradeable representation of gear you choose to export.",
+          "Coinbase Wallet is the onboarding target — including paths that reduce seed-phrase friction for players new to crypto.",
         ],
         bullets: [
-          "Bridge out — item leaves functional in-game inventory; becomes a tradeable NFT",
-          "Bridge in — connect a wallet holding that NFT; item returns to your playable loadout",
-          "Transfer watch — sell the NFT externally and in-game function ends for the prior holder after reverification",
+          "Bridge out — item leaves your playable vault and becomes a tradeable NFT",
+          "Bridge in — connect a wallet holding that NFT; item returns to your expedition kit",
+          "Sell externally — NFT sale ends in-game function for the prior holder after reverification",
         ],
       },
       {
-        title: "Utility-first NFTs",
+        title: "Utility-first NFTs and OpenSea trading",
         paragraphs: [
-          "Exported gear is designed to stay meaningful inside rifts when you bridge it back — not sit in a wallet as a JPEG with stats. A mythic blade should matter because it changes what you can survive, not because it trends on a leaderboard.",
+          "Exported gear is designed to stay meaningful inside rifts when you bridge it back — stats tied to what you extracted and crafted, not a JPEG with a game reskin. A mythic blade should change what you can survive, not just trend on a leaderboard.",
+          "After the bridge launches, the intended path is: earn gear in a rift → bridge out to Base → list on OpenSea or another NFT marketplace → buyer acquires the on-chain item. You can bridge a different piece back in when you want functional loadout gear again.",
         ],
       },
       {
-        title: "Sponsored minting (exploring)",
+        title: "Sponsored minting",
         paragraphs: [
-          "We are exploring gas-sponsored first mints through a game-operated wallet so bridge-out does not require holding ETH on day one. Limits and eligibility will ship with the bridge — this is design intent, not an alpha feature.",
+          "We are exploring gas-sponsored first mints through a game-operated wallet so your initial bridge-out may not require holding ETH. Limits and eligibility will ship with the asset bridge.",
         ],
       },
       {
-        title: "What we are not promising",
+        title: "What ships in the closed alpha",
         paragraphs: [
-          "No withdrawable Bitcoin for playing. No live NFT mint in closed alpha. No wallet required to join the alpha list. Read the full roadmap Q&A on the FAQ.",
+          "Alpha testers breach rifts, extract loot, fabricate in the workshop, and stress the stamina loop — all off-chain, no wallet required. Marketplace, Strikes trading, NFT bridge, and OpenSea export follow once the core loop proves out in live play.",
+          "Join the alpha list to shape extraction and crafting before economy features go live. Full Q&A on pay-to-win, free-to-play, and NFTs lives on the FAQ.",
         ],
       },
     ],
