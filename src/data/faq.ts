@@ -28,6 +28,26 @@ export const FAQ_SECTIONS: FaqSection[] = [
           "Yes — in the sense that rift terrain is derived from real Bitcoin data, not a cosmetic crypto skin. Fee pressure, transaction density, difficulty, and halving era shape each rift’s danger and scale. You do not need to own Bitcoin or connect a wallet to play the closed alpha. The chain is the world’s source code, not a login gate.",
       },
       {
+        question: "Why does Breachwalker use the Bitcoin ledger?",
+        answer:
+          "Because Bitcoin is a public, immutable timeline of sealed moments — each block a record of how busy the network was, how hard mining was, and which subsidy era the chain was in. That is a natural spine for expedition worldbuilding: verifiable history instead of server-only fiction. Breachwalker maps public block statistics into rift danger, scale, and density, then seeds layouts and loot deterministically from each catalog entry’s identity. You read the archive; you do not need to trade on it to play.",
+      },
+      {
+        question: "What Bitcoin data shapes a rift?",
+        answer:
+          "Public block statistics — how many transactions fit, how heavy the block was, fee pressure at the time, mining difficulty, input/output complexity, and era flags such as halving or difficulty-adjustment blocks. These normalize into gameplay dimensions like density, scale, danger, and harshness. Congested, fee-heavy history tends to produce more punishing rifts; quiet eras read differently. Exact mapping formulas are Breachwalker’s generation spec and can evolve with balance — the principle is that rift feel grows from inspectable chain history.",
+      },
+      {
+        question: "What is a catalog entry?",
+        answer:
+          "The player-facing archive index for a rift — how the surface hold labels one wound in the ledger (for example a halving-era reference). Under the hood it ties to a specific Bitcoin block height and hash, but walkers breach rifts and read catalog numbers, not chain jargon in the UI.",
+      },
+      {
+        question: "Do I need to understand Bitcoin to play?",
+        answer:
+          "No. The closed alpha needs only a browser — no wallet, no keys, no mempool literacy. Understanding the ledger helps you appreciate why a halving-era rift hits harder or why two catalog entries play nothing alike. The game teaches breach, extract, and craft; this FAQ and the Bitcoin rifts page explain the worldbuilding layer for curious walkers.",
+      },
+      {
         question: "What is a rift?",
         answer:
           "A rift is a playable expedition space — not a hand-authored level. Public Bitcoin data deterministically shapes how harsh, crowded, and large each rift feels. You choose rifts from the global atlas and your personal ledger. Halving-era rifts carry extra weight; high-density rifts feel resource-heavy and crowded.",
@@ -35,7 +55,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "How are rifts generated from Bitcoin data?",
         answer:
-          "Each rift maps to a catalog entry derived from on-chain history. Danger, scale, and density emerge from fee pressure, block weight, input complexity, and difficulty when that slice of the chain was sealed — not from a designer sliding knobs. Same catalog entry, same parameters, every time.",
+          "Each catalog entry anchors to a real block’s public record. Statistics from that block normalize into terrain scores — density, scale, danger, harshness, and related dimensions. Deterministic seeds derived from the block’s identity then drive layout and loot generation so the same catalog entry always shares the same core rift parameters and fixed legendary coordinates. Personal survey fog can still differ between your runs; global atlas claims do not.",
       },
       {
         question: "What is a breach?",

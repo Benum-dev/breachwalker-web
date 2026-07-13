@@ -24,44 +24,79 @@ export type SeoPage = {
 export const SEO_PAGES: Record<string, SeoPage> = {
   "bitcoin-rifts": {
     path: "/bitcoin-rifts",
-    metaTitle: "Bitcoin-Derived Rifts",
+    metaTitle: "Why Bitcoin? Rifts from On-Chain History",
     metaDescription:
-      "How Breachwalker turns Bitcoin on-chain history into deterministic rifts — danger, scale, and halving-era weight from public block data. No wallet required in alpha.",
+      "Why Breachwalker uses the Bitcoin ledger for worldbuilding: immutable public history, deterministic rifts, and plain-language terms — transaction density, fee pressure, halving eras — without wallet required.",
     eyebrow: "World generation",
-    title: "Bitcoin history becomes rifts",
+    title: "Why the Bitcoin ledger becomes rifts",
     intro:
-      "Every rift in Breachwalker is seeded from real Bitcoin data — not a cosmetic crypto skin. Public block statistics shape danger, scale, density, and special era flags before you ever pack your kit.",
+      "Breachwalker reads Bitcoin’s public block history as an archive of sealed moments — each catalog entry a rift whose danger, scale, and era identity come from what actually happened on-chain. No wallet required to play. This page explains why that ledger fits expedition worldbuilding, in plain terms.",
     sections: [
       {
         title: "What is a rift?",
         paragraphs: [
-          "A rift is an expedition space — a place you breach into from the surface hold. Each rift maps to a catalog entry in the atlas, derived deterministically from on-chain history.",
-          "Danger, scale, and density are not hand-tuned level design. They emerge from fee pressure, transaction weight, input complexity, and difficulty at the moment that slice of the chain was sealed.",
+          "A rift is an expedition space you breach into from the surface hold — not a hand-drawn level. Each rift corresponds to a catalog entry in the atlas: one wound in the ledger where era, congestion, and mining weight crystallized into playable terrain.",
+          "Walkers never need to speak chain jargon in-game. The catalog number is how the hold archives each rift; underneath, it maps to a specific slice of Bitcoin history.",
         ],
       },
       {
-        title: "Why Bitcoin as substrate",
+        title: "Why the Bitcoin ledger?",
         paragraphs: [
-          "Bitcoin is the immutable archive Breachwalker reads. Halving-era rifts carry harsher weight. High-density rifts feel crowded and resource-heavy. Quiet eras read differently on the atlas.",
-          "You do not need a wallet to play the alpha. The chain is the world's source code — not a login gate.",
+          "Most game worlds are server fiction — a designer picks numbers and hopes they feel consistent. Bitcoin offers something different: a single, public, immutable timeline that billions of dollars have secured for over a decade. Every block is a timestamped record of how busy the network was, how hard mining was, and which era of subsidy history the chain was in when that record was sealed.",
+          "That matters for Breachwalker because expedition games need worlds that feel earned and inspectable. A halving block really happened on a known date. A congestion spike really occurred. The ledger does not forget and anyone can verify the source record — we map public statistics into rift danger, scale, and density, then derive layouts and loot from deterministic seeds tied to that record’s identity.",
+          "We are not asking you to trade Bitcoin or log in with a wallet. The chain is read-only substrate for world generation — a shared historical spine — not a paywall.",
         ],
         bullets: [
-          "Deterministic — same catalog entry, same rift parameters, every time",
-          "Public data — no proprietary server fiction for core terrain variance",
-          "Lore-aligned — halving moons, strike echoes, sealed vault whispers tie back to chain history",
+          "Immutable — history cannot be rewritten by a game server",
+          "Public — source data is inspectable, not a black-box RNG",
+          "Era-rich — halvings, difficulty cycles, and congestion epochs are real events",
+          "Deterministic — same catalog entry, same core rift identity for every walker",
         ],
       },
       {
-        title: "The atlas and the ledger",
+        title: "Terms in plain language",
         paragraphs: [
-          "Walkers share a global atlas: which rifts have been charted worldwide. Your personal ledger shows what you may breach today — open routes, sealed rifts waiting on anchor spikes, rifts you have already run.",
+          "You do not need to be a Bitcoin user to breach rifts. These are the ideas Breachwalker borrows — and how they show up in play:",
+        ],
+        bullets: [
+          "Bitcoin block — one sealed page of ledger history; Breachwalker treats it as the origin of a catalog entry",
+          "Catalog entry — the archive index for a rift (e.g. a halving-era reference); player-facing name for that block’s wound in the ledger",
+          "Block hash — the block’s unique fingerprint; anchors deterministic seeds so layouts and loot rolls reproduce from the same origin",
+          "Transaction count & block weight — how busy and heavy the block was → rift density and scale (crowded vs sparse, large vs tight)",
+          "Fee pressure — how expensive block space was when the block was mined → danger and pressure inside the rift",
+          "Mining difficulty — how hard proof-of-work was at that height → harshness and endurance demand",
+          "Halving era — which subsidy epoch the block belongs to; halving blocks carry mythic weight on the atlas",
+          "Inscription era (Taproot onward) — blocks where on-chain artifacts exist can flag relic-grade rift identity",
+        ],
+      },
+      {
+        title: "How statistics become rift feel",
+        paragraphs: [
+          "Breachwalker does not paste blockchain dashboards into the UI. Public block statistics are normalized into gameplay dimensions — density, scale, danger, harshness, complexity, resource — that drive how large a rift is, how punishing it feels, and how loot and encounters skew.",
+          "Congested, fee-heavy history tends to produce harsher, more dangerous rifts. Quiet, lightweight eras read differently on the atlas. Chain-event blocks — halvings, difficulty adjustments, inscription-heavy periods — can elevate a rift’s tier and trigger mega-rift rules. The exact mapping is part of Breachwalker’s generation spec and evolves with balance patches; the principle is fixed: rift identity grows out of verifiable history, not arbitrary server dice.",
+          "Below the terrain scores, deterministic seeds derived from each catalog entry’s identity govern layout and loot tables. That is why two walkers breaching the same catalog entry share the same legendary coordinates and the same world-level claims — while personal survey progress can still differ run to run.",
+        ],
+      },
+      {
+        title: "Why this fits shared worldbuilding",
+        paragraphs: [
+          "A global atlas only works if the world is worth sharing. Bitcoin gives Breachwalker a catalog of thousands of real historical moments — each a potential rift with its own era story — instead of a finite set of hand-authored maps.",
+          "Legendary and mythic finds at fixed coordinates make sense when those coordinates are tied to a public record everyone can reference. First walker to extract claims that slice of history on the atlas; the ledger already said that moment was unique.",
+          "Tradeable item NFTs on Base (roadmap) sit on a different layer — Bitcoin seeds the world; Base carries exportable gear. The homage lives in generation; the wallet lives in optional bridge-out.",
+        ],
+      },
+      {
+        title: "The atlas and your ledger",
+        paragraphs: [
+          "Walkers share a global atlas: which rifts have been charted worldwide, which mythic entries have been first-breached, and which legendary coordinates are spent. Your personal rift ledger shows what you may breach today — open routes, sealed rifts waiting on anchor spikes, rifts you have already run.",
           "Virgin rifts sit on the ledger until a walker extracts for the first time. Then the atlas grows for everyone.",
         ],
       },
       {
-        title: "Not a wallet game (alpha)",
+        title: "Playing without crypto",
         paragraphs: [
-          "Closed alpha is off-chain. No seed phrase, no gas, no mint button. You are testing whether breaching rifts and extracting loot feels worth returning to — before item NFTs on Base or marketplace settlement ships.",
+          "The closed alpha is off-chain: no seed phrase, no gas, no mint button. You are testing whether breaching rifts and extracting loot feels worth returning to — before marketplace settlement and the asset bridge on Base.",
+          "Understanding Bitcoin helps you appreciate why a halving-era rift hits different. It is not required to pack your kit or extract.",
         ],
       },
     ],
