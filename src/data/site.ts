@@ -2,7 +2,7 @@ export const SITE = {
   name: "Breachwalker",
   url: "https://breachwalker.com",
   description:
-    "Bitcoin-derived rift survival. Pack your kit, breach into rifts seeded from on-chain history, extract loot — or collapse back to the surface.",
+    "Expedition survival where corruption cracks the Record into rifts. Pack your kit, breach inward, extract loot — or collapse back to the surface hold.",
   locale: "en",
   producer: {
     name: "Benum Labs",

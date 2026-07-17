@@ -15,17 +15,17 @@ export const FAQ_SECTIONS: FaqSection[] = [
     id: "game",
     title: "Gameplay & rifts",
     intro:
-      "Web-first extraction survival in rifts seeded from Bitcoin on-chain history. Pack your kit, breach inward, extract loot — or collapse back to the surface.",
+      "Web-first extraction survival where corruption cracks the Record into rifts. Pack your kit, breach inward, extract loot — or collapse back to the surface hold.",
     entries: [
       {
         question: "What is Breachwalker?",
         answer:
-          "Breachwalker is a web-first extraction survival game from Benum Labs. You stand on the surface hold, pick a rift from the ledger, pack your expedition kit, and breach inward — managing stamina, fighting through procedurally derived space, and extracting loot to your vault before you collapse. Every rift is seeded from Bitcoin’s public on-chain history, so danger, scale, and density differ catalog entry by catalog entry.",
+          "Breachwalker is a web-first extraction survival game from Benum Labs. The Hold recruits breachers to enter rifts — expedition spaces where corrupted ledger entries have cracked open. You stand on the surface hold, pick a rift from the ledger, pack your expedition kit, and breach inward — managing stamina, fighting through procedurally derived space, and extracting loot to your vault before you collapse. Danger, scale, and density differ catalog entry by catalog entry because each rift grows from a different wound in the Record.",
       },
       {
         question: "Is Breachwalker a Bitcoin game?",
         answer:
-          "Yes — in the sense that rift terrain is derived from real Bitcoin data, not a cosmetic crypto skin. Fee pressure, transaction density, difficulty, and halving era shape each rift’s danger and scale. You do not need to own Bitcoin or connect a wallet to play the closed alpha. The chain is the world’s source code, not a login gate.",
+          "Yes — in the sense that rift terrain is derived from real Bitcoin data, not a cosmetic crypto skin. Fee pressure, transaction density, difficulty, and halving era shape each rift’s danger and scale. You do not need to own Bitcoin or connect a wallet to play the closed alpha. The public archive is read-only substrate for world generation — not a login gate.",
       },
       {
         question: "Why does Breachwalker use the Bitcoin ledger?",
@@ -40,22 +40,22 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What is a catalog entry?",
         answer:
-          "The player-facing archive index for a rift — how the surface hold labels one wound in the ledger (for example a halving-era reference). Under the hood it ties to a specific Bitcoin block height and hash, but walkers breach rifts and read catalog numbers, not chain jargon in the UI.",
+          "The player-facing archive index for a rift — how the surface hold labels one wound in the ledger (for example a halving-era reference). Breachers breach rifts and read catalog numbers, not archive jargon in the UI. Each entry anchors to a specific sealed moment in the public record that seeds that rift’s identity. For how that archive maps to generation, see the Bitcoin rifts page.",
       },
       {
         question: "Do I need to understand Bitcoin to play?",
         answer:
-          "No. The closed alpha needs only a browser — no wallet, no keys, no mempool literacy. Understanding the ledger helps you appreciate why a halving-era rift hits harder or why two catalog entries play nothing alike. The game teaches breach, extract, and craft; this FAQ and the Bitcoin rifts page explain the worldbuilding layer for curious walkers.",
+          "No. The closed alpha needs only a browser — no wallet, no keys, no mempool literacy. Understanding why a halving-era rift hits harder helps you appreciate the world; it is not required to pack your kit or extract. The game teaches breach, extract, and craft. Curious about the archive behind the ledger? The Bitcoin rifts page explains the worldbuilding layer.",
       },
       {
         question: "What is a rift?",
         answer:
-          "A rift is a playable expedition space — not a hand-authored level. Public Bitcoin data deterministically shapes how harsh, crowded, and large each rift feels. You choose rifts from the global atlas and your personal ledger. Halving-era rifts carry extra weight; high-density rifts feel resource-heavy and crowded.",
+          "A rift is where a corrupted ledger entry has cracked open into breachable space — not a hand-authored level. Danger and loot crystallize from the same fracture: what makes a rift punishing is what makes it worth breaching. You choose rifts from the global atlas and your personal ledger. Halving-era rifts carry extra weight; high-density rifts feel resource-heavy and crowded.",
       },
       {
         question: "How are rifts generated from Bitcoin data?",
         answer:
-          "Each catalog entry anchors to a real block’s public record. Statistics from that block normalize into terrain scores — density, scale, danger, harshness, and related dimensions. Deterministic seeds derived from the block’s identity then drive layout and loot generation so the same catalog entry always shares the same core rift parameters and fixed legendary coordinates. Personal survey fog can still differ between your runs; global atlas claims do not.",
+          "Each catalog entry anchors to a real sealed moment in Bitcoin’s public archive. Statistics from that entry normalize into terrain scores — density, scale, danger, harshness, and related dimensions. Deterministic seeds derived from the entry’s identity then drive layout and loot generation so the same catalog entry always shares the same core rift parameters and fixed legendary coordinates. Personal survey fog can still differ between your runs; global atlas claims do not. Full plain-language glossary on the Bitcoin rifts page.",
       },
       {
         question: "What is a breach?",
@@ -65,17 +65,17 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What is the atlas?",
         answer:
-          "The atlas is the shared global registry of charted rifts — which expedition spaces walkers worldwide have mapped. Your personal rift ledger shows what you can breach today: open routes, sealed rifts waiting on anchor spikes, and rifts you have already run. Virgin rifts grow the atlas for everyone when a walker extracts for the first time.",
+          "The atlas is the shared global registry of charted rifts — which expedition spaces breachwalkers worldwide have mapped. Your personal rift ledger shows what you can breach today: open routes, sealed rifts waiting on anchor spikes, and rifts you have already run. Virgin rifts grow the atlas for everyone when a breachwalker extracts for the first time.",
       },
       {
         question: "What are legendary, mythic, and one-of-one items?",
         answer:
-          "Top-tier rarity bands above routine loot. Legendary and mythic items can sit at fixed coordinates inside a rift — predetermined locations every walker maps to the same place. One-of-one is the rarest tier above mythic: a single global instance tied to a specific find, not a stack of duplicates. These are the drops collectors chase and the items designed for NFT bridge export, because each carries real provenance.",
+          "Top-tier rarity bands above routine loot. Legendary and mythic items can sit at fixed coordinates inside a rift — predetermined locations every breachwalker maps to the same place. One-of-one is the rarest tier above mythic: a single global instance tied to a specific find, not a stack of duplicates. These are the drops collectors chase and the items designed for NFT bridge export, because each carries real provenance.",
       },
       {
         question: "How does the global atlas track legendary and mythic finds?",
         answer:
-          "Legendary and mythic items at fixed coordinates are globally unique on the shared atlas. The first walker to extract one claims it for the world — recorded on the atlas so every other walker knows that coordinate is spent. One-of-one global claims follow the same first-find-wins model on the roadmap. Routine gear below legendary still drops from personal encounters and is not atlas-locked at a single world coordinate. Full global claim authority ships with the live cloud atlas; the closed alpha focuses on the breach loop first.",
+          "Legendary and mythic items at fixed coordinates are globally unique on the shared atlas. The first breachwalker to extract one claims it for the world — recorded on the atlas so every other breachwalker knows that coordinate is spent. One-of-one global claims follow the same first-find-wins model on the roadmap. Routine gear below legendary still drops from personal encounters and is not atlas-locked at a single world coordinate. Full global claim authority ships with the live cloud atlas; the closed alpha focuses on the breach loop first.",
       },
       {
         question: "What happens when I die in a rift?",
@@ -95,12 +95,12 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "Is Breachwalker like Escape from Tarkov?",
         answer:
-          "Similar extract-or-lose-it pressure — kit packing, greed punished, high-stakes loot — but Breachwalker is expedition survival in Bitcoin-derived rifts, not a military FPS. Single-player in alpha; stamina and collapse drive pacing alongside combat.",
+          "Similar extract-or-lose-it pressure — kit packing, greed punished, high-stakes loot — but Breachwalker is expedition survival in procedurally derived rifts, not a military FPS. Single-player in alpha; stamina and collapse drive pacing alongside combat.",
       },
       {
         question: "Is Breachwalker multiplayer?",
         answer:
-          "Each breach is single-player in the alpha. Walkers share an asynchronous global atlas — charted rifts, virgin ledger entries, first-extract milestones — so the world grows together without live co-op or PvP in the same instance.",
+          "Each breach is single-player in the alpha. Breachwalkers share an asynchronous global atlas — charted rifts, virgin ledger entries, first-extract milestones — so the world grows together without live co-op or PvP in the same instance.",
       },
       {
         question: "Will Breachwalker add real-time multiplayer?",
@@ -118,7 +118,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What is the closed alpha?",
         answer:
-          "Early access for walkers who test the breach loop before wider release. You breach rifts, extract loot, fabricate in the workshop, and send feedback while we harden the client and backend. Alpha testers directly influence stamina tuning, loot pressure, and workshop balance.",
+          "Early access for breachwalkers who test the breach loop before wider release. You breach rifts, extract loot, fabricate in the workshop, and send feedback while we harden the client and backend. Alpha testers directly influence stamina tuning, loot pressure, and workshop balance.",
       },
       {
         question: "What do alpha testers actually do?",
@@ -156,22 +156,22 @@ export const FAQ_SECTIONS: FaqSection[] = [
     id: "economy",
     title: "Item economy",
     intro:
-      "Extract gear in rifts, fabricate in the workshop, trade with other walkers. Strikes settle marketplace deals. Bridge select loot to Base NFTs on the roadmap. The closed alpha proves the breach loop first.",
+      "Extract gear in rifts, fabricate in the workshop, trade with other breachwalkers. Strikes settle marketplace deals. Bridge select loot to Base NFTs on the roadmap. The closed alpha proves the breach loop first.",
     entries: [
       {
         question: "How does the item economy work?",
         answer:
-          "Every valuable item starts in gameplay. Breaches drop gear and reagents. The workshop turns reagents into breach keys, healing stock, and equipment. Walkers list surplus loot on the player marketplace for Strikes, or — on the roadmap — bridge high-tier pieces to tradeable NFTs on Base. Rare drops from harsh rifts carry provenance collectors value.",
+          "Every valuable item starts in gameplay. Breaches drop gear and reagents. The workshop turns reagents into breach keys, healing stock, and equipment. Breachwalkers list surplus loot on the player marketplace for Strikes, or — on the roadmap — bridge high-tier pieces to tradeable NFTs on Base. Rare drops from harsh rifts carry provenance collectors value — which catalog entry, which era of the Record shaped the fracture.",
       },
       {
         question: "What are Strikes?",
         answer:
-          "Strikes are Breachwalker’s only currency — one pool for every walker, with no separate premium token for spenders. You get Strikes by selling items on the in-game marketplace (buyers pay; sellers receive net after a platform fee) or by purchasing them with fiat. Breaches drop items and reagents, not Strikes. Free-to-play walkers earn Strikes the same way: extract loot, list on the marketplace, receive payment from buyers.",
+          "Strikes are Breachwalker’s only currency — one pool for every breachwalker, with no separate premium token for spenders. You get Strikes by selling items on the in-game marketplace (buyers pay; sellers receive net after a platform fee) or by purchasing them with fiat. Breaches drop items and reagents, not Strikes. Free-to-play breachwalkers earn Strikes the same way: extract loot, list on the marketplace, receive payment from buyers.",
       },
       {
         question: "Is there a player marketplace?",
         answer:
-          "Yes — a walker-to-walker marketplace is planned. List crafted gear, reagents, and rare extractions at a Strikes price; buyers pay; you receive net proceeds after a platform fee. High-tier items retain provenance — which rift they came from and their craft history — which supports collector pricing. The marketplace launches after the breach loop proves sticky in live play.",
+          "Yes — a breachwalker-to-breachwalker marketplace is planned. List crafted gear, reagents, and rare extractions at a Strikes price; buyers pay; you receive net proceeds after a platform fee. High-tier items retain provenance — which rift they came from and their craft history — which supports collector pricing. The marketplace launches after the breach loop proves sticky in live play.",
       },
       {
         question: "Can I earn money by playing?",
@@ -181,12 +181,12 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "Is Breachwalker pay to win?",
         answer:
-          "Designed as no pay-to-win. Equippable gear comes from breaches, workshop fabrication, or player trade — not a cash-only gear tab. Strikes are one currency for everyone; free-to-play walkers earn them by selling items other players want. Spending fiat is a shortcut to Strikes for marketplace convenience, not a gate on the best mythic loot.",
+          "Designed as no pay-to-win. Equippable gear comes from breaches, workshop fabrication, or player trade — not a cash-only gear tab. Strikes are one currency for everyone; free-to-play breachwalkers earn them by selling items other players want. Spending fiat is a shortcut to Strikes for marketplace convenience, not a gate on the best mythic loot.",
       },
       {
         question: "Can free-to-play players compete?",
         answer:
-          "Yes. Gameplay is how items enter the economy. Extract reagents, fabricate competitive gear, sell on the marketplace, and spend the Strikes you receive on other walkers’ listings — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Strikes.",
+          "Yes. Gameplay is how items enter the economy. Extract reagents, fabricate competitive gear, sell on the marketplace, and spend the Strikes you receive on other breachwalkers’ listings — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Strikes.",
       },
       {
         question: "Do I need to spend money to play?",
@@ -229,7 +229,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "Which chain will NFTs use?",
         answer:
-          "Base — lower fees and mature marketplace tooling than minting everything on Bitcoin L1. Bitcoin remains the substrate for rift generation and lore; Base carries the tradeable representation of gear you choose to export. Coinbase Wallet is the onboarding target, including paths that reduce seed-phrase friction for players new to crypto.",
+          "Base — lower fees and mature marketplace tooling than minting everything on Bitcoin L1. The public archive remains the substrate for rift generation; Base carries the tradeable representation of gear you choose to export. Coinbase Wallet is the onboarding target, including paths that reduce seed-phrase friction for players new to crypto.",
       },
       {
         question: "Will I need ETH to mint an NFT?",

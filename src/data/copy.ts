@@ -7,7 +7,7 @@ export const COPY = {
     eyebrow: "Closed alpha opening soon",
     title: "Cross the breach.",
     subhead:
-      "Rifts carved from Bitcoin’s on-chain history. Pack your expedition kit, breach inward, extract what you can — or collapse back to the surface.",
+      "Corruption cracks sealed entries in the Record. Pack your expedition kit, breach a rift, extract what you can — or collapse back to the surface hold.",
     ctaPrimary: "Request alpha access",
     ctaSecondary: "How it works",
   },
@@ -22,7 +22,7 @@ export const COPY = {
       id: "rifts",
       label: "Rifts",
       title: "Every rift is different",
-      body: "Danger, scale, and density vary rift by rift — derived deterministically from on-chain data. Uncharted rifts wait behind anchor keys. Halving-era rifts carry harsher weight.",
+      body: "Danger, scale, and density vary rift by rift — each catalog entry a different wound in the ledger. Uncharted rifts wait behind anchor keys. Halving-era fractures carry harsher weight.",
     },
     {
       id: "kit",
@@ -34,11 +34,11 @@ export const COPY = {
       id: "strikes",
       label: "Strikes",
       title: "One currency",
-      body: "Strikes settle trade between walkers. Breaches drop items, not Strikes — reagents and gear move through the workshop and marketplace.",
+      body: "Strikes settle trade between breachwalkers. Breaches drop items, not Strikes — reagents and gear move through the workshop and marketplace.",
     },
   ] as const,
   loreWhispers: [
-    "prophecy of the halving moon",
+    "echo of the halving seal",
     "echo of the first strike",
     "chalk tally from a sealed vault",
   ] as const,
@@ -60,7 +60,7 @@ export const COPY = {
       'Email us with the subject "Alpha access" and we will add you manually.',
   },
   footer: {
-    tagline: "Bitcoin-derived rift survival.",
+    tagline: "Expedition survival at the edge of a corrupted ledger.",
     rights: "All rights reserved.",
   },
 } as const;
