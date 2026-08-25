@@ -7,7 +7,7 @@ export const COPY = {
     eyebrow: "Cross the breach.",
     title: "Extraction survival — extract loot or collapse trying.",
     subhead:
-      "Manage your stamina, loot procedurally generated rifts, and extract before you collapse. No wallet needed for alpha.",
+      "Manage your Corruption Tolerance, loot procedurally generated rifts, and extract before you collapse. No wallet needed for alpha.",
     subheadLinkLabel: "See how sealed history becomes expedition space",
     ctaPrimary: "Join the alpha list",
     ctaSecondary: "How it works",
@@ -18,7 +18,7 @@ export const COPY = {
       id: "breach",
       label: "The breach",
       title: "Surface to depth",
-      body: "From the surface hold you choose a rift and begin the breach. Stamina runs down with every step. Extract while you still can, or collapse and wake on the surface with what you kept in the vault.",
+      body: "From the surface hold you choose a rift and begin the breach. Corruption Tolerance runs down with every step. Extract while you still can, or collapse and wake on the surface with what you kept in the vault.",
     },
     {
       id: "rifts",
@@ -33,10 +33,10 @@ export const COPY = {
       body: "Fabricate breach keys and healing stock in the workshop. Pack your expedition kit. Bank extracted loot in the vault. What you carry into the breach is what you stand to lose.",
     },
     {
-      id: "strikes",
-      label: "Strikes",
+      id: "marks",
+      label: "Marks",
       title: "One currency",
-      body: "Strikes settle trade between breachwalkers. Breaches drop items, not Strikes — reagents and gear move through the workshop and marketplace.",
+      body: "Marks settle trade between breachwalkers. Breaches drop items, not Marks — reagents and gear move through the workshop and marketplace.",
     },
   ] as const,
   loreWhispers: [

@@ -13,7 +13,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "generate:og": "node scripts/generate-og.mjs"
+    "generate:og": "node scripts/generate-og.mjs",
+    "discord:setup": "node scripts/discord/setup-server.mjs",
+    "discord:automod": "node scripts/discord/setup-automod.mjs",
+    "discord:test-webhooks": "node scripts/discord/test-webhooks.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

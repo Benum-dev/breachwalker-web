@@ -1,0 +1,35 @@
+---
+description: Discord community ownership — ops scripts here, runtime webhooks in game monorepo
+alwaysApply: false
+globs: "scripts/discord/**,src/data/discord.ts"
+---
+
+# Discord community
+
+## This repo owns
+
+- **Community server ops:** `scripts/discord/` (setup, AutoMod, webhook tests)
+- **Config SoT:** `src/data/discord.ts` — invite URL, channel slugs, webhook env key names
+- **Marketing surfaces:** Discord CTAs, invite link in `site.ts` (sourced from `discord.ts`)
+
+## Game monorepo owns
+
+- **Runtime world-event POSTs:** `../Breachwalker/backend/functions/src/shared/notifications.ts`
+- **Event hooks:** runs, marketplace callables
+- **Player opt-out:** `notifications.broadcast_enabled` (when implemented)
+
+## Webhook env naming
+
+Prefer `DISCORD_WHISPERS_WEBHOOK` / `DISCORD_MARKETPLACE_WEBHOOK`. Functions also accept legacy `WORLD_EVENTS_*` — do not duplicate both names in Firebase secrets.
+
+## Secrets
+
+Never commit `.env` with `DISCORD_BOT_TOKEN` or webhook URLs. Never add tokens to Cloudflare Pages env (static site only).
+
+## Copy rules for embeds
+
+Rift Whispers and Marketplace posts use breach + rift vocabulary and `handle#tag` — see skill `breachwalker-terminology` and doc 07 §4.13.
+
+## Agent workflow
+
+Run skill `breachwalker-discord-ops` before editing server structure or webhook wiring.

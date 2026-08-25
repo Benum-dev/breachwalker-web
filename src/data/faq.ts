@@ -20,7 +20,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What is Breachwalker?",
         answer:
-          "Breachwalker is a web-first extraction survival game from Benum Labs. The Hold recruits breachers to enter rifts — expedition spaces where corrupted ledger entries have cracked open. You stand on the surface hold, pick a rift from the ledger, pack your expedition kit, and breach inward — managing stamina, fighting through procedurally derived space, and extracting loot to your vault before you collapse. Danger, scale, and density differ catalog entry by catalog entry because each rift grows from a different wound in the Record.",
+          "Breachwalker is a web-first extraction survival game from Benum Labs. The Hold recruits breachers to enter rifts — expedition spaces where corrupted ledger entries have cracked open. You stand on the surface hold, pick a rift from the ledger, pack your expedition kit, and breach inward — managing Corruption Tolerance, fighting through procedurally derived space, and extracting loot to your vault before you collapse. Danger, scale, and density differ catalog entry by catalog entry because each rift grows from a different wound in the Record.",
       },
       {
         question: "Is Breachwalker a Bitcoin game?",
@@ -60,7 +60,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What is a breach?",
         answer:
-          "A breach is one run into a rift. Fabricate a breach key in the workshop, pack healing stock and gear into your expedition kit, cross inward, and either extract with loot or collapse back to the surface when stamina runs out.",
+          "A breach is one run into a rift. Fabricate a breach key in the workshop, pack healing stock and gear into your expedition kit, cross inward, and either extract with loot or collapse back to the surface when Corruption Tolerance runs out.",
       },
       {
         question: "What is the atlas?",
@@ -80,22 +80,22 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What happens when I die in a rift?",
         answer:
-          "You are lost in the breach — anything you carried unbanked stays behind. Gear already in your vault on the surface is safe. Worn equipment returns with a durability hit. Run out of stamina and you collapse instead: dragged to the surface with what you kept, without a full character wipe.",
+          "Combat death severs the bond — that hero is lost. Anything carried unbanked stays behind. Gear already in the Hold vault is safe. Some banked equipped gear may survive depending on rarity; the rest of that hero’s investment is gone. You Bond a replacement from your Company. Run out of Corruption Tolerance and you collapse instead: dragged to the surface with what you kept — the hero survives. Collapse is not death.",
       },
       {
         question: "Is there permadeath?",
         answer:
-          "No account wipe. Long-term progress lives in your vault between breaches. Death costs unbanked loot and durability on worn gear — not everything you have ever extracted. The tension is extract-or-lose-it on each run.",
+          "Yes for the hero — combat death ends that bond permanently. No account wipe: your Walker, Hold vault, lore, and formulas persist. Collapse from empty Corruption Tolerance is a soft failure only. The Company is what makes hero permadeath tolerable — lose one operative, not everything the Hold has banked.",
       },
       {
         question: "Is Breachwalker an extraction survival game?",
         answer:
-          "Yes. The core loop is pack your kit, breach a rift, push while stamina drains, and extract loot to your vault before greed or exhaustion gets you killed or collapsed. Unbanked loot is at risk every run. It plays in the browser as solo expedition survival rather than a squad tactical shooter.",
+          "Yes. The core loop is pack your kit, breach a rift with a bonded hero, push while Corruption Tolerance drains, and extract loot to your vault before greed or combat ends the run. Unbanked loot is at risk every breach; combat death costs the hero. It plays in the browser as solo expedition survival rather than a squad tactical shooter.",
       },
       {
         question: "Is Breachwalker like Escape from Tarkov?",
         answer:
-          "Similar extract-or-lose-it pressure — kit packing, greed punished, high-stakes loot — but Breachwalker is expedition survival in procedurally derived rifts, not a military FPS. Single-player in alpha; stamina and collapse drive pacing alongside combat.",
+          "Similar extract-or-lose-it pressure — kit packing, greed punished, high-stakes loot — but Breachwalker is expedition survival in procedurally derived rifts, not a military FPS. Single-player in alpha; CT, collapse, and hero permadeath on combat death drive pacing alongside combat.",
       },
       {
         question: "Is Breachwalker multiplayer?",
@@ -110,6 +110,54 @@ export const FAQ_SECTIONS: FaqSection[] = [
     ],
   },
   {
+    id: "heroes",
+    title: "Heroes, classes & abilities",
+    intro:
+      "You are the Walker. Heroes are mortal bonds you Immerse and send into rifts. Archetypes, subclasses, and ability trees shape how each operative fights — and combat death ends that bond.",
+    entries: [
+      {
+        question: "Who is the Walker vs the hero?",
+        answer:
+          "The Walker is you — the investigator who runs the Hold, vault, lore, and Company. A hero is a mortal operative Bonded into that Company and sent into rifts. The Hold’s progress outlives any single hero; combat death severs that bond, not your account.",
+      },
+      {
+        question: "What is Bonding and Immersion?",
+        answer:
+          "Bonding commits a Company slot to a new hero. Immersion saturates that hero with the Record so they can survive rift pressure — it is what makes an operative breach-ready, not a blessing or bloodline gift. When the bond is severed, capacity frees for a new Bond.",
+      },
+      {
+        question: "What are archetypes?",
+        answer:
+          "Four starting paths for a Bonded hero: Warrior, Attuned, Ranger, and Keeper. Each brings its own ability tree, attributes, and gear affinities. Display names stay those four — not generic mage or cleric labels.",
+      },
+      {
+        question: "What are subclasses?",
+        answer:
+          "Specialization trees unlocked as a hero deepens — eleven locked paths, including unique lines (Berserker, Unraveler, Quill, Sentinel, Warden) and bridge subclasses that join two archetypes (Conduit, Paladin, Oracle, Druid, Duelist, Rune Archer). A subclass tree is endgame-scale investment, not a short unlock list.",
+      },
+      {
+        question: "What are abilities?",
+        answer:
+          "Depth you invest into archetype and subclass trees. Points buy ranks on nodes; some nodes need matching gear equipped to stay live. Each hero only sees their own archetype tree plus unlocked subclass trees.",
+      },
+      {
+        question: "What are Passives, Echoes, and Arts?",
+        answer:
+          "Three kinds of ability node. Passives are standing stat scaling from investment. Echoes auto-fire when something happens in combat — a hit, a block, being struck — you never choose their timing. Arts are player-activated, turn-consuming actions you choose when to cast. Arts cost Corruption Tolerance, Saturation, or HP depending on the Art; Passives and Echoes do not charge those resources for firing.",
+      },
+      {
+        question: "What is Saturation vs Corruption Tolerance?",
+        answer:
+          "Corruption Tolerance (CT) is the expedition vital — it drains as you push a rift and taxes combat turns; empty CT forces collapse, not hero death. Saturation is a separate pool many Record-flavored Arts draw on; it regenerates over world time and on winning encounters. Some Arts cost CT or HP instead. Passives and Echoes do not spend Saturation or CT to fire.",
+      },
+      {
+        question: "Where do I learn individual abilities?",
+        answer:
+          "In the in-game Codex and ability trees on the Company / Hold screens — node names, costs, and gates live there. This FAQ stays high-level on types and identity; it is not a full ability encyclopedia.",
+      },
+    ],
+  },
+  {
     id: "alpha",
     title: "Closed alpha",
     intro:
@@ -118,12 +166,12 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "What is the closed alpha?",
         answer:
-          "Early access for breachwalkers who test the breach loop before wider release. You breach rifts, extract loot, fabricate in the workshop, and send feedback while we harden the client and backend. Alpha testers directly influence stamina tuning, loot pressure, and workshop balance.",
+          "Early access for breachwalkers who test the breach loop before wider release. You breach rifts, extract loot, fabricate in the workshop, and send feedback while we harden the client and backend. Alpha testers directly influence Corruption Tolerance tuning, loot pressure, and workshop balance.",
       },
       {
         question: "What do alpha testers actually do?",
         answer:
-          "Play the full breach loop in the browser: pick a rift from the ledger, pack your expedition kit, breach inward, manage stamina, extract gear to your vault, and fabricate breach keys and healing stock between runs. Report bugs, friction, and whether the loop feels worth repeating.",
+          "Play the full breach loop in the browser: pick a rift from the ledger, pack your expedition kit, breach inward, manage Corruption Tolerance, extract gear to your vault, and fabricate breach keys and healing stock between runs. Report bugs, friction, and whether the loop feels worth repeating.",
       },
       {
         question: "When can I play?",
@@ -156,47 +204,47 @@ export const FAQ_SECTIONS: FaqSection[] = [
     id: "economy",
     title: "Item economy",
     intro:
-      "Extract gear in rifts, fabricate in the workshop, trade with other breachwalkers. Strikes settle marketplace deals. Bridge select loot to Base NFTs on the roadmap. The closed alpha proves the breach loop first.",
+      "Extract gear in rifts, fabricate in the workshop, trade with other breachwalkers. Marks settle marketplace deals. Bridge select loot to Base NFTs on the roadmap. The closed alpha proves the breach loop first.",
     entries: [
       {
         question: "How does the item economy work?",
         answer:
-          "Every valuable item starts in gameplay. Breaches drop gear and reagents. The workshop turns reagents into breach keys, healing stock, and equipment. Breachwalkers list surplus loot on the player marketplace for Strikes, or — on the roadmap — bridge high-tier pieces to tradeable NFTs on Base. Rare drops from harsh rifts carry provenance collectors value — which catalog entry, which era of the Record shaped the fracture.",
+          "Every valuable item starts in gameplay. Breaches drop gear and reagents. The workshop turns reagents into breach keys, healing stock, and equipment. Breachwalkers list surplus loot on the player marketplace for Marks, or — on the roadmap — bridge high-tier pieces to tradeable NFTs on Base. Rare drops from harsh rifts carry provenance collectors value — which catalog entry, which era of the Record shaped the fracture.",
       },
       {
-        question: "What are Strikes?",
+        question: "What are Marks?",
         answer:
-          "Strikes are Breachwalker’s only currency — one pool for every breachwalker, with no separate premium token for spenders. You get Strikes by selling items on the in-game marketplace (buyers pay; sellers receive net after a platform fee) or by purchasing them with fiat. Breaches drop items and reagents, not Strikes. Free-to-play breachwalkers earn Strikes the same way: extract loot, list on the marketplace, receive payment from buyers.",
+          "Marks are Breachwalker’s only currency — one pool for every breachwalker, with no separate premium token for spenders. You get Marks by selling items on the in-game marketplace (buyers pay; sellers receive net after a platform fee) or by purchasing them with fiat. Breaches drop items and reagents, not Marks. Free-to-play breachwalkers earn Marks the same way: extract loot, list on the marketplace, receive payment from buyers.",
       },
       {
         question: "Is there a player marketplace?",
         answer:
-          "Yes — a breachwalker-to-breachwalker marketplace is planned. List crafted gear, reagents, and rare extractions at a Strikes price; buyers pay; you receive net proceeds after a platform fee. High-tier items retain provenance — which rift they came from and their craft history — which supports collector pricing. The marketplace launches after the breach loop proves sticky in live play.",
+          "Yes — a breachwalker-to-breachwalker marketplace (Exchange) is built for post-alpha live play. List crafted gear, reagents, and rare extractions at a Marks price; buyers pay; you receive net proceeds after a platform fee. High-tier items retain provenance — which rift they came from and their craft history — which supports collector pricing. Closed alpha stays off-chain without marketplace settlement.",
       },
       {
         question: "Can I earn money by playing?",
         answer:
-          "Breachwalker is item-first soft P2E: economic upside comes from valuable gear and skilled play, not from logging in for a token drip. Planned paths: sell loot on the in-game marketplace for Strikes, then cash out through platform fiat rails when available; or bridge gear you earned to a utility NFT on Base and sell on OpenSea or another external market. Returns depend on demand, rarity, and how well you play — nothing is guaranteed. Marketplace and bridge are roadmap features.",
+          "Breachwalker is item-first soft P2E: economic upside comes from valuable gear and skilled play, not from logging in for a token drip. Planned paths: sell loot on the in-game marketplace for Marks, then cash out through platform fiat rails when available; or bridge gear you earned to a utility NFT on Base and sell on OpenSea or another external market. Returns depend on demand, rarity, and how well you play — nothing is guaranteed. Marketplace and bridge are roadmap features.",
       },
       {
         question: "Is Breachwalker pay to win?",
         answer:
-          "Designed as no pay-to-win. Equippable gear comes from breaches, workshop fabrication, or player trade — not a cash-only gear tab. Strikes are one currency for everyone; free-to-play breachwalkers earn them by selling items other players want. Spending fiat is a shortcut to Strikes for marketplace convenience, not a gate on the best mythic loot.",
+          "Designed as no pay-to-win. Equippable gear comes from breaches, workshop fabrication, or player trade — not a cash-only gear tab. Marks are one currency for everyone; free-to-play breachwalkers earn them by selling items other players want. Spending fiat is a shortcut to Marks for marketplace convenience, not a gate on the best mythic loot.",
       },
       {
         question: "Can free-to-play players compete?",
         answer:
-          "Yes. Gameplay is how items enter the economy. Extract reagents, fabricate competitive gear, sell on the marketplace, and spend the Strikes you receive on other breachwalkers’ listings — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Strikes.",
+          "Yes. Gameplay is how items enter the economy. Extract reagents, fabricate competitive gear, sell on the marketplace, and spend the Marks you receive on other breachwalkers’ listings — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Marks.",
       },
       {
         question: "Do I need to spend money to play?",
         answer:
-          "No purchase required for the alpha. At full release, breach entry uses crafted consumables — breach keys and anchor spikes you fabricate from reagents extracted in play — not a direct cash gate per run. Fiat buys Strikes for marketplace convenience; it does not mint exclusive tier loot.",
+          "No purchase required for the alpha. At full release, breach entry uses crafted consumables — breach keys and anchor spikes you fabricate from reagents extracted in play — not a direct cash gate per run. Fiat buys Marks for marketplace convenience; it does not mint exclusive tier loot.",
       },
       {
         question: "What economy features ship in the alpha?",
         answer:
-          "Extraction, crafting, vault storage, and the stamina loop — all off-chain. Marketplace listing, Strikes trading, NFT bridge, and OpenSea export follow once the core breach loop proves out. Alpha testers shape loot and workshop balance before economy features go live.",
+          "Extraction, crafting, vault storage, and the Corruption Tolerance loop — all off-chain. Marketplace listing, Marks trading, NFT bridge, and OpenSea export follow once the core breach loop proves out. Alpha testers shape loot and workshop balance before economy features go live.",
       },
     ],
   },

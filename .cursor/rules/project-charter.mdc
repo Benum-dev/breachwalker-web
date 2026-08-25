@@ -5,9 +5,9 @@ alwaysApply: true
 
 # breachwalker-web — Project charter
 
-**What this is:** Static marketing site for Breachwalker on Cloudflare Pages. Landing, alpha signup (Tally), FAQ, SEO spokes, privacy/terms.
+**What this is:** Static marketing site for Breachwalker on Cloudflare Pages. Landing, alpha signup (Tally), FAQ, SEO spokes, privacy/terms. **Discord community ops** (server provisioning scripts, webhook tests, invite/config SoT).
 
-**What this is not:** Game client, Firebase backend, marketplace, wallet, or CMS. Those live in `../Breachwalker/`.
+**What this is not:** Game client, Firebase **runtime** world-event webhooks, marketplace, wallet, or CMS. Those live in `../Breachwalker/` (Functions post to Discord; this repo provisions the server and holds the invite link).
 
 ## Always
 
@@ -30,5 +30,7 @@ alwaysApply: true
 
 - Hosting architecture: `../Breachwalker/Docs/08-web-hosting-and-analytics.md`
 - Lore: `../Breachwalker/Docs/10-world-lore-and-cosmology.md`
+- Discord world events: `../Breachwalker/Docs/07-backend-firebase-spec.md` §4.13
+- Discord ops scripts: `scripts/discord/README.md`
 - Routes & deploy: `README.md`
 - Agent entry: `AGENTS.md`

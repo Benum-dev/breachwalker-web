@@ -38,6 +38,8 @@ Marketing site for **Breachwalker** (`breachwalker.com`): landing, closed alpha 
 | `src/data/structured-data.ts` | JSON-LD builders |
 | `src/data/og-images.ts` | Per-route OG image paths |
 | `scripts/generate-og.mjs` | 1200×630 OG PNGs (`prebuild`) |
+| `scripts/discord/` | Discord server setup, AutoMod, webhook tests (ops only) |
+| `src/data/discord.ts` | Invite URL, channel names, webhook env key names |
 | `public/` | Favicons, robots, static OG assets |
 
 ## Ground rules
@@ -47,7 +49,7 @@ Marketing site for **Breachwalker** (`breachwalker.com`): landing, closed alpha 
 3. **Static-first** — no client JS unless interaction truly needs it. Prefer Astro islands only when required.
 4. **Trailing slashes** — internal links via `pagePath()` / `pageUrl()` so canonicals and sitemap stay consistent.
 5. **Design tokens** — colors, type, spacing from `tokens.css` / `global.css`. Do not introduce Tailwind or a second palette.
-6. **Scope** — this repo is marketing only. Game loop, Firebase, marketplace, and wallet work belong in `../Breachwalker/`.
+6. **Scope** — marketing site + **Discord community ops** (setup scripts, invite CTAs). Game loop, Firebase runtime webhooks, marketplace, and wallet logic stay in `../Breachwalker/`.
 7. **Minimal diffs** — change only what the task needs (see `.cursor/rules/anti-overengineering.mdc`).
 
 ## Commands
@@ -61,6 +63,9 @@ npm run build        # prebuild OG + astro check + build → dist/
 npm run preview
 npm run generate:og  # regenerate OG images only
 npm run check
+npm run discord:setup          # provision server (destructive — see scripts/discord/README.md)
+npm run discord:automod        # AutoMod rules
+npm run discord:test-webhooks  # test Rift Whispers / Marketplace embeds
 ```
 
 ## MCP tools
@@ -79,6 +84,7 @@ Do not invent Cloudflare dashboard state — query MCP when available. For copy/
 | Skill | When to use |
 |-------|-------------|
 | `breachwalker-terminology` | Any player-facing or marketing copy |
+| `breachwalker-discord-ops` | Discord server setup, webhooks, AutoMod, Firebase wiring |
 | `add-seo-page` | New SEO spoke route + OG + sitemap priority |
 | `verify-marketing-site` | Build/check + browser smoke after meaningful UI/SEO changes |
 

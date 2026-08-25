@@ -120,11 +120,11 @@ export const SEO_PAGES: Record<string, SeoPage> = {
     path: "/item-economy",
     metaTitle: "Item Economy, Marketplace & NFT Bridge",
     metaDescription:
-      "Breachwalker item economy: extract gear in rifts, craft in the workshop, sell on the player marketplace for Strikes, or bridge items to Base NFTs. Free-to-play friendly, no pay-to-win. Closed alpha signup.",
+      "Breachwalker item economy: extract gear in rifts, craft in the workshop, sell on the player marketplace for Marks, or bridge items to Base NFTs. Free-to-play friendly, no pay-to-win. Closed alpha signup.",
     eyebrow: "Item economy",
     title: "Loot, trade, and bridge what you earn",
     intro:
-      "Breachwalker runs on items — gear and reagents you extract in rifts, fabricate in the workshop, and trade with other breachwalkers. Strikes settle in-game deals. On the roadmap, bridge select loot to Base as utility NFTs and sell on external markets. The closed alpha proves the breach loop; marketplace and bridge follow.",
+      "Breachwalker runs on items — gear and reagents you extract in rifts, fabricate in the workshop, and trade with other breachwalkers. Marks settle in-game deals. On the roadmap, bridge select loot to Base as utility NFTs and sell on external markets. The closed alpha proves the breach loop; marketplace and bridge follow.",
     sections: [
       {
         title: "How the item economy works",
@@ -135,7 +135,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         bullets: [
           "Extract — gear and reagents drop inside rifts, not currency",
           "Fabricate — workshop formulas turn reagents into keys, kits, and gear",
-          "Trade — marketplace listings settled in Strikes between breachwalkers",
+          "Trade — marketplace listings settled in Marks between breachwalkers",
           "Bridge — export earned gear to Base NFTs for external sale (roadmap)",
         ],
       },
@@ -155,7 +155,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         title: "The player marketplace",
         paragraphs: [
-          "A breachwalker-to-breachwalker marketplace is planned for crafted gear, rare reagents, and high-tier extractions. You set a price in Strikes; buyers pay; you receive net proceeds after a platform fee. Free-to-play breachwalkers use the same marketplace as everyone else — sell loot other players want, spend the Strikes you earn on their listings.",
+          "A breachwalker-to-breachwalker marketplace is planned for crafted gear, rare reagents, and high-tier extractions. You set a price in Marks; buyers pay; you receive net proceeds after a platform fee. Free-to-play breachwalkers use the same marketplace as everyone else — sell loot other players want, spend the Marks you earn on their listings.",
           "Provenance matters for collector value. A mythic blade from a halving-era rift with a clear craft history can command more than generic gear. The marketplace launches after the breach loop proves sticky in live play.",
         ],
       },
@@ -163,28 +163,28 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         title: "Earning through skilled play",
         paragraphs: [
           "Breachwalker is item-first soft P2E: returns come from valuable gear and smart play, not from showing up for a token drip. Two planned paths to real-world upside:",
-          "Sell on the in-game marketplace — extract loot, list it for Strikes, cash out through platform fiat rails when available. Bridge to NFT — export gear you earned to Base, list on OpenSea or another external market, sell to a collector. Bridge a different item back in when you want playable gear again.",
+          "Sell on the in-game marketplace — extract loot, list it for Marks, cash out through platform fiat rails when available. Bridge to NFT — export gear you earned to Base, list on OpenSea or another external market, sell to a collector. Bridge a different item back in when you want playable gear again.",
           "Nothing is guaranteed. Prices depend on demand, rarity, and how deep you push in dangerous rifts. Marketplace and asset bridge are roadmap features; closed alpha testers focus on extraction and crafting only.",
         ],
       },
       {
-        title: "Strikes — one currency for everyone",
+        title: "Marks — one currency for everyone",
         paragraphs: [
-          "Strikes are Breachwalker’s sole settlement currency — one pool for every breachwalker, with no separate premium token locked behind spending. You obtain Strikes by selling items on the marketplace or purchasing them with fiat. Breaches drop items and reagents, not Strikes.",
-          "Spending fiat is a shortcut to Strikes for marketplace convenience. It does not mint exclusive tier loot or bypass the breach loop. Free-to-play breachwalkers earn Strikes by selling gameplay loot — the same economic path buyers use when they spend those Strikes on your listings.",
+          "Marks are Breachwalker’s sole settlement currency — one pool for every breachwalker, with no separate premium token locked behind spending. You obtain Marks by selling items on the marketplace or purchasing them with fiat. Breaches drop items and reagents, not Marks.",
+          "Spending fiat is a shortcut to Marks for marketplace convenience. It does not mint exclusive tier loot or bypass the breach loop. Free-to-play breachwalkers earn Marks by selling gameplay loot — the same economic path buyers use when they spend those Marks on your listings.",
         ],
       },
       {
         title: "Free-to-play and no pay-to-win",
         paragraphs: [
           "Equippable gear is designed to come from breaches, workshop fabrication, or player trade — not a cash-only gear tab. There is no VIP currency pool, no battle-pass-only mythic track, and no whale-only loot crate on-chain.",
-          "A free-to-play breachwalker can extract reagents, fabricate competitive kit, sell on the marketplace, and buy other players’ gear with Strikes earned from sales — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Strikes.",
+          "A free-to-play breachwalker can extract reagents, fabricate competitive kit, sell on the marketplace, and buy other players’ gear with Marks earned from sales — without ever topping up with fiat. Skill in rift selection, extraction timing, and crafting choices should matter more than whether you bought Marks.",
         ],
         bullets: [
-          "One currency — Strikes only, for marketplace settlement",
+          "One currency — Marks only, for marketplace settlement",
           "Gameplay earns items — breaches and crafting, not login rewards",
-          "F2P viable — sell extracted loot to earn Strikes from buyers",
-          "Fiat buys Strikes faster, not exclusive mythic gear",
+          "F2P viable — sell extracted loot to earn Marks from buyers",
+          "Fiat buys Marks faster, not exclusive mythic gear",
         ],
       },
       {
@@ -215,7 +215,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         title: "What ships in the closed alpha",
         paragraphs: [
-          "Alpha testers breach rifts, extract loot, fabricate in the workshop, and stress the stamina loop — all off-chain, no wallet required. Marketplace, Strikes trading, NFT bridge, and OpenSea export follow once the core loop proves out in live play.",
+          "Alpha testers breach rifts, extract loot, fabricate in the workshop, and stress the Corruption Tolerance loop — all off-chain, no wallet required. Marketplace, Marks trading, NFT bridge, and OpenSea export follow once the core loop proves out in live play.",
           "Join the alpha list to shape extraction and crafting before economy features go live. Full Q&A on pay-to-win, free-to-play, and NFTs lives on the FAQ.",
         ],
       },
@@ -232,11 +232,11 @@ export const SEO_PAGES: Record<string, SeoPage> = {
     path: "/how-it-works",
     metaTitle: "How It Works",
     metaDescription:
-      "How Breachwalker plays: surface hold, expedition kit, breach a rift, manage stamina, extract loot to vault or collapse. Closed alpha signup.",
+      "How Breachwalker plays: surface hold, expedition kit, breach a rift, manage Corruption Tolerance, extract loot to vault or collapse. Closed alpha signup.",
     eyebrow: "Gameplay",
     title: "How Breachwalker works",
     intro:
-      "A single-player expedition loop: prepare on the surface, breach a rift, push your stamina, extract loot to the vault, or collapse back empty-handed.",
+      "A single-player expedition loop: prepare on the surface, breach a rift, push your Corruption Tolerance, extract loot to the vault, or collapse back empty-handed.",
     sections: [
       {
         title: "1. Surface hold",
@@ -247,13 +247,13 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         title: "2. Begin the breach",
         paragraphs: [
-          "Cross into the rift you selected. Stamina ticks down with movement and combat pressure. What you carry in your kit is what you stand to lose if you do not extract.",
+          "Cross into the rift you selected. Corruption Tolerance ticks down with movement and combat pressure. What you carry in your kit is what you stand to lose if you do not extract.",
         ],
       },
       {
-        title: "3. Extract or collapse",
+        title: "3. Extract, collapse, or bond severed",
         paragraphs: [
-          "Extract alive and bank loot in the vault. Run out of stamina and you collapse — dragged to the surface with what you kept. Die in the breach and unbanked loot stays behind; worn gear returns with durability loss.",
+          "Extract alive and bank loot in the vault. Run out of Corruption Tolerance and you collapse — dragged to the surface with what you kept; the hero survives. Combat death severs the bond — that hero is lost, unbanked loot stays behind, and you Bond a replacement from your Company. The Hold vault persists either way.",
         ],
       },
       {
@@ -275,23 +275,23 @@ export const SEO_PAGES: Record<string, SeoPage> = {
     path: "/extraction-survival-game",
     metaTitle: "Extraction Survival Game",
     metaDescription:
-      "Breachwalker is a web-first extraction survival game — stamina pressure, kit packing, loot risk, and extract-or-collapse runs in Bitcoin-derived rifts. Closed alpha signup.",
+      "Breachwalker is a web-first extraction survival game — CT pressure, kit packing, loot risk, and extract-or-collapse runs in Bitcoin-derived rifts. Closed alpha signup.",
     eyebrow: "For gamers",
     title: "Extraction survival in derived rifts",
     intro:
-      "If you want the extract-or-lose-it tension of extraction shooters without the squad FPS wrapper — stamina, greed, and gear risk in single-player rifts — Breachwalker is built around that loop.",
+      "If you want the extract-or-lose-it tension of extraction shooters without the squad FPS wrapper — CT pressure, greed, and gear risk in single-player rifts — Breachwalker is built around that loop.",
     sections: [
       {
         title: "The extraction loop",
         paragraphs: [
-          "Pack your expedition kit on the surface. Breach a rift. Push deeper while stamina drains. Extract to bank loot in the vault, or collapse and wake on the surface with what you kept.",
+          "Pack your expedition kit on the surface. Breach a rift. Push deeper while Corruption Tolerance drains. Extract to bank loot in the vault, or collapse and wake on the surface with what you kept.",
           "Unbanked loot is at risk if you are lost in the breach. The decision is always: push for one more room, or extract while you still can.",
         ],
       },
       {
-        title: "Not a character wipe",
+        title: "Hero permadeath, not account wipe",
         paragraphs: [
-          "Death is not permadeath for your breacher. You lose what you carried unbanked; worn gear returns with a durability hit. The vault on the surface is your long-term progress.",
+          "Combat death ends that hero’s bond — permanent for the operative, not for your Walker. Unbanked loot is lost; the Hold vault, lore, and formulas stay. Collapse from empty Corruption Tolerance is soft failure only. Bond a replacement from your Company and breach again.",
         ],
       },
       {
@@ -300,7 +300,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
           "Breachwalker is expedition survival in procedurally derived rifts — not a tactical military sim. No squad voice chat in alpha. Each catalog entry seeds a rift’s danger and scale from a different wound in the ledger, so two entries can play nothing alike.",
         ],
         bullets: [
-          "Stamina and collapse — not only ballistics TTK",
+          "CT and collapse — not only ballistics TTK",
           "Workshop fabrication — reagents and formulas between runs",
           "Rift ledger — choose destinations from the atlas, not a matchmaking queue",
           "Web-first browser play — closed alpha signup open now",
@@ -309,7 +309,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       {
         title: "Fair play for free players",
         paragraphs: [
-          "Gear comes from gameplay. There is no premium currency track — Strikes settle marketplace trades, and free-to-play breachwalkers can earn Strikes by selling items they extracted and crafted. No pay-to-win gear sheet.",
+          "Gear comes from gameplay. There is no premium currency track — Marks settle marketplace trades, and free-to-play breachwalkers can earn Marks by selling items they extracted and crafted. No pay-to-win gear sheet.",
         ],
       },
     ],

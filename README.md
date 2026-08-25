@@ -12,7 +12,7 @@ Built with [Astro](https://astro.build) (static output), deployed to **Cloudflar
 | `/alpha` | Closed alpha signup (Tally) |
 | `/faq` | Nested FAQ + FAQPage JSON-LD |
 | `/bitcoin-rifts` | SEO — Bitcoin-derived rifts |
-| `/item-economy` | SEO — item economy, Strikes, NFT roadmap |
+| `/item-economy` | SEO — item economy, Marks, NFT roadmap |
 | `/how-it-works` | SEO — breach loop |
 | `/extraction-survival-game` | SEO — extraction survival keywords |
 | `/privacy` | Privacy policy |
@@ -125,6 +125,22 @@ Cloudflare injects Web Analytics automatically for proxied Pages sites. Optional
 1. Create a form at [tally.so](https://tally.so) with: email (required), Discord (optional), privacy checkbox linking to `/privacy`
 2. Copy embed URL → `PUBLIC_TALLY_FORM_URL`
 3. Redeploy
+
+## Discord community ops
+
+This repo owns **community server tooling** (not runtime game webhooks):
+
+| Command | Purpose |
+|---------|---------|
+| `npm run discord:setup` | Provision roles, channels, webhooks (⚠️ deletes existing channels) |
+| `npm run discord:automod` | AutoMod: profanity, mention spam, phishing keywords |
+| `npm run discord:test-webhooks` | Send test Rift Whispers / Marketplace embeds |
+
+Copy `.env.example` → `.env` and set `DISCORD_BOT_TOKEN`, `DISCORD_GUILD_ID`, and webhook URLs. Full guide: [`scripts/discord/README.md`](scripts/discord/README.md).
+
+**Runtime** world-event broadcasts (`maybeBroadcastWorldEvent`) stay in `../Breachwalker/backend/functions/`. Wire webhook URLs there after setup. Spec: monorepo `Docs/07-backend-firebase-spec.md` §4.13.
+
+Invite link SoT: [`src/data/discord.ts`](src/data/discord.ts) (used by the marketing site).
 
 ## Copy & terminology
 

@@ -70,7 +70,7 @@ On-chain history is the **substrate** in design prose — not something the play
 | Home / between breaches | **the Hold**, **surface hold** | base camp, home screen, hub |
 | Pre-breach loadout UI | **Loadout** (worn gear + expedition kit) | prep, Kit (legacy `COPY.kit` key), stash tab |
 | Stash | **Vault** | stash (ok in dev), bank |
-| Currency | **Marks** (`mk`) — sole settlement currency | gold, credits, coins, sats, premium currency |
+| Currency | **Marks** (`mk`) — sole settlement currency; formerly **Strikes** / `str` (display rename 2026-08; schema may still say `strikes`) | gold, credits, coins, sats, premium currency, **Strikes** (legacy display) |
 | Breach entry cost | **Breach key** (crafted consumable) | strike fee, gold fee |
 | Open sealed / unbreached rift | **Anchor spike** / **anchor keys** (quantity scales) | discover fee, unlock fee |
 | Crafting UI | **Workshop**; **fabricated** from **formulas** / **reagents** | craft panel, recipes |
@@ -115,6 +115,8 @@ Death is **not** a Walker/account wipe. **Interim:** unbanked loot lost; worn ge
 
 ## Marks (sole currency)
 
+**Display rename (doc 10 §11, 2026-08):** player-facing **Marks** (`mk`), formerly **Strikes** / `str`. Reason: “Strikes” read as unintentionally violent; `str` collided with Strength. Schema/code may keep `players.strikes`, `price_strikes`, etc. Combat ability names that use “Strike” are unrelated. On this marketing site, never say Strikes for the currency.
+
 **One currency only** — no premium/earned split, **no VIP-only currency**. Marks are obtained by:
 
 1. **Selling items** on the in-game marketplace (buyer pays in Marks; seller receives net after **5–15%** platform tax) — **F2P-viable path**
@@ -123,6 +125,10 @@ Death is **not** a Walker/account wipe. **Interim:** unbanked loot lost; worn ge
 Breaches do **not** drop Marks. They drop **items** and **reagents** earned in gameplay. Do not describe Marks as “earned from logging in” or “play to earn tokens.”
 
 **Pay-to-win guardrail:** All equippable gear is intended to come from breaches, workshop fabrication, or player trade — never a cash-only gear tab or premium-only mythic track.
+
+## Corruption Tolerance (expedition vital)
+
+**Display:** **Corruption Tolerance** / **CT** — not **Stamina** in player-facing marketing or FAQ. Code/config may stay `stamina_*`. CT drains in the breach; collapse is a CT failure (dragged to surface), not framed as death.
 
 ## Marketing site — two-layer copy (doc 10)
 
