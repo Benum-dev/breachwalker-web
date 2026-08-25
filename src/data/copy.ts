@@ -1,15 +1,17 @@
 export const COPY = {
   nav: {
     faq: "FAQ",
-    alpha: "Alpha access",
+    alpha: "Join the alpha list",
   },
   hero: {
-    eyebrow: "Closed alpha opening soon",
-    title: "Cross the breach.",
+    eyebrow: "Cross the breach.",
+    title: "Extraction survival — extract loot or collapse trying.",
     subhead:
-      "Corruption cracks sealed entries in the Record. Pack your expedition kit, breach a rift, extract what you can — or collapse back to the surface hold.",
-    ctaPrimary: "Request alpha access",
+      "Manage your stamina, loot procedurally generated rifts, and extract before you collapse. No wallet needed for alpha.",
+    subheadLinkLabel: "See how sealed history becomes expedition space",
+    ctaPrimary: "Join the alpha list",
     ctaSecondary: "How it works",
+    ctaNote: "No wallet required for alpha",
   },
   teasers: [
     {
@@ -48,9 +50,9 @@ export const COPY = {
     button: "Join the alpha list",
   },
   alpha: {
-    title: "Request alpha access",
+    title: "Join the alpha list",
     intro:
-      "Breachwalker is in closed alpha. Leave your email and we will send an invite when the next batch opens.",
+      "Breachwalker is in closed alpha. Leave your email and we will send an invite when the next batch opens. No wallet required.",
     privacyLabel: "I agree to the",
     privacyLink: "Privacy Policy",
     submit: "Join the list",
@@ -58,6 +60,19 @@ export const COPY = {
     fallbackTitle: "Signup form loading",
     fallbackBody:
       'Email us with the subject "Alpha access" and we will add you manually.',
+  },
+  community: {
+    title: "Be among the first breachwalkers",
+    body: "Closed alpha starts small. Discord is where invites, build drops, and early feedback land — join before the Hold fills out.",
+    discordCta: "Join Discord",
+    alphaCta: "Join the alpha list",
+  },
+  aboutStudio: {
+    title: "Who is building Breachwalker",
+  },
+  landingFaq: {
+    title: "Questions before you breach",
+    fullFaqLabel: "Full FAQ →",
   },
   footer: {
     tagline: "Expedition survival at the edge of a corrupted ledger.",

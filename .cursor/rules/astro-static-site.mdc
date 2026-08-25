@@ -1,0 +1,53 @@
+---
+description: Astro static-site conventions for this repo (no Tailwind)
+globs: "**/*.{astro,ts,mjs,css}"
+alwaysApply: false
+---
+
+# Astro static site
+
+Inspired by awesome-cursorrules Astro guidance; adapted for plain CSS tokens (this repo does not use Tailwind).
+
+## Structure
+
+- Pages in `src/pages/` (file-based routing)
+- Shared chrome in `src/layouts/BaseLayout.astro`
+- Components in `src/components/`
+- Content/config in `src/data/`
+- Global styles: `src/styles/global.css` + `tokens.css`
+
+## Components
+
+- Prefer `.astro` over framework islands
+- Pass data via props; keep copy in data modules
+- Scoped `<style>` in components is fine; shared look lives in tokens/global
+- Use `client:*` only when interactivity cannot be HTML/CSS/Tally embed
+
+## Routing & URLs
+
+- `trailingSlash: "always"` — never invent bare paths in hrefs
+- Canonical + sitemap via `site` in `astro.config.mjs` and `pageUrl()`
+- New indexable routes need sitemap priority in `astro.config.mjs` `PAGE_PRIORITY`
+
+## Performance
+
+- Static generation by default; no unnecessary runtime fetches
+- Compress HTML is on; keep markup lean
+- Images: prefer optimized static assets under `public/`; OG via `scripts/generate-og.mjs`
+
+## SEO hooks
+
+- Every page sets `PageMeta` into `BaseLayout`
+- Structured data through `JsonLd` + builders in `structured-data.ts`
+- OG: register slug in `generate-og.mjs` and `og-images.ts` when adding routes
+
+## TypeScript
+
+- Strict Astro tsconfig — avoid `any`
+- Export typed records (`as const`) for copy/SEO data
+- Keep helpers pure and colocated in `src/data/`
+
+## Docs
+
+- Astro: https://docs.astro.build
+- Prefer official guides linked from `AGENTS.md` / Astro docs over inventing patterns

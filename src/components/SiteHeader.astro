@@ -20,11 +20,16 @@ const currentPath = Astro.url.pathname;
       <span class="site-logo__text">{SITE.name}</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a class="site-nav__link" href={SITE.discordInviteUrl} target="_blank" rel="noopener noreferrer">
+      <a
+        class="site-nav__link site-nav__link--discord"
+        href={SITE.discordInviteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Discord
       </a>
       <a
-        class:list={["site-nav__link", { "is-active": currentPath === "/faq" }]}
+        class:list={["site-nav__link", "site-nav__link--faq", { "is-active": currentPath === "/faq" || currentPath === "/faq/" }]}
         href={pagePath("/faq")}
       >
         {COPY.nav.faq}
@@ -108,8 +113,13 @@ const currentPath = Astro.url.pathname;
   }
 
   @media (max-width: 480px) {
-    .site-nav__link {
+    .site-nav__link--faq {
       display: none;
+    }
+
+    .site-nav__cta {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8125rem;
     }
   }
 </style>

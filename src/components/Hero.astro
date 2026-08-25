@@ -8,7 +8,11 @@ import { pagePath } from "../data/site";
   <div class="container hero__inner">
     <p class="eyebrow">{COPY.hero.eyebrow}</p>
     <h1>{COPY.hero.title}</h1>
-    <p class="hero__subhead muted">{COPY.hero.subhead}</p>
+    <p class="hero__subhead muted">
+      {COPY.hero.subhead}
+      {" "}Curious why every rift feels different?
+      <a href={pagePath("/bitcoin-rifts")}>{COPY.hero.subheadLinkLabel}</a>.
+    </p>
     <div class="hero__actions">
       <a class="btn btn--primary" href={pagePath("/alpha")} data-analytics="cta-alpha">
         {COPY.hero.ctaPrimary}
@@ -17,6 +21,7 @@ import { pagePath } from "../data/site";
         {COPY.hero.ctaSecondary}
       </a>
     </div>
+    <p class="hero__note muted">{COPY.hero.ctaNote}</p>
   </div>
 </section>
 
@@ -54,5 +59,20 @@ import { pagePath } from "../data/site";
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-md);
+  }
+
+  .hero__subhead a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .hero__subhead a:hover {
+    color: var(--color-accent);
+  }
+
+  .hero__note {
+    margin: var(--space-md) 0 0;
+    font-size: 0.875rem;
   }
 </style>

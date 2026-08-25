@@ -108,12 +108,12 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         ],
       },
     ],
-    ctaLabel: "Request alpha access",
+    ctaLabel: "Join the alpha list",
     relatedLinks: [
       { href: "/how-it-works", label: "How it works" },
       { href: "/item-economy", label: "Item economy" },
       { href: "/faq", label: "FAQ" },
-      { href: "/alpha", label: "Alpha access" },
+      { href: "/alpha", label: "Join the alpha list" },
     ],
   },
   "item-economy": {
@@ -225,7 +225,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
       { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
       { href: "/extraction-survival-game", label: "Extraction survival" },
       { href: "/faq", label: "FAQ" },
-      { href: "/alpha", label: "Alpha access" },
+      { href: "/alpha", label: "Join the alpha list" },
     ],
   },
   "how-it-works": {
@@ -263,12 +263,12 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         ],
       },
     ],
-    ctaLabel: "Request alpha access",
+    ctaLabel: "Join the alpha list",
     relatedLinks: [
       { href: "/extraction-survival-game", label: "Extraction survival" },
       { href: "/bitcoin-rifts", label: "Bitcoin rifts" },
       { href: "/faq", label: "FAQ" },
-      { href: "/alpha", label: "Alpha access" },
+      { href: "/alpha", label: "Join the alpha list" },
     ],
   },
   "extraction-survival-game": {
@@ -313,7 +313,7 @@ export const SEO_PAGES: Record<string, SeoPage> = {
         ],
       },
     ],
-    ctaLabel: "Request alpha access",
+    ctaLabel: "Join the alpha list",
     relatedLinks: [
       { href: "/how-it-works", label: "How it works" },
       { href: "/item-economy", label: "Item economy" },

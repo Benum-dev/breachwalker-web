@@ -7,25 +7,25 @@ import { breadcrumbJsonLd, webPageJsonLd } from "../data/structured-data";
 
 const jsonLd = [
   webPageJsonLd({
-    name: "Alpha access",
+    name: "Join the alpha list",
     description:
-      "Request closed alpha access to Breachwalker — block-derived expedition survival.",
+      "Join the Breachwalker closed alpha list — extraction survival, no wallet required.",
     path: "/alpha",
   }),
   breadcrumbJsonLd([
     { name: "Home", path: "/" },
-    { name: "Alpha access", path: "/alpha" },
+    { name: "Alpha", path: "/alpha" },
   ]),
 ];
 ---
 
 <BaseLayout
   meta={{
-    title: "Alpha access",
+    title: "Join the alpha list",
     description:
-      "Request closed alpha access to Breachwalker — block-derived expedition survival.",
+      "Join the Breachwalker closed alpha list — extraction survival, no wallet required.",
     path: "/alpha",
-    ogImageAlt: "Request Breachwalker closed alpha access",
+    ogImageAlt: "Join the Breachwalker closed alpha list",
   }}
   jsonLd={jsonLd}
 >
@@ -34,7 +34,7 @@ const jsonLd = [
       <nav class="breadcrumb muted" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span aria-hidden="true"> / </span>
-        <span>Alpha access</span>
+        <span>Alpha</span>
       </nav>
       <p class="eyebrow">Closed alpha</p>
       <h1>{COPY.alpha.title}</h1>

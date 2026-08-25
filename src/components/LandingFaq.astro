@@ -1,0 +1,52 @@
+---
+import { COPY } from "../data/copy";
+import { landingFaqEntries } from "../data/faq";
+import { pagePath } from "../data/site";
+
+const entries = landingFaqEntries();
+---
+
+<section class="landing-faq" aria-labelledby="landing-faq-heading">
+  <div class="container container--narrow">
+    <h2 id="landing-faq-heading">{COPY.landingFaq.title}</h2>
+    <div class="faq-list landing-faq__list">
+      {
+        entries.map((entry) => (
+          <details class="faq-item">
+            <summary>{entry.question}</summary>
+            <div class="faq-answer">
+              <p>{entry.answer}</p>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+    <p class="landing-faq__more">
+      <a href={pagePath("/faq")}>{COPY.landingFaq.fullFaqLabel}</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .landing-faq {
+    padding: var(--space-3xl) 0;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .landing-faq h2 {
+    margin-bottom: var(--space-xl);
+  }
+
+  .landing-faq__list {
+    padding: 0;
+  }
+
+  .landing-faq__more {
+    margin-top: var(--space-xl);
+  }
+
+  .landing-faq__more a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+</style>

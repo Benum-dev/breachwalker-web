@@ -128,7 +128,7 @@ export const FAQ_SECTIONS: FaqSection[] = [
       {
         question: "When can I play?",
         answer:
-          "Invites roll out in batches — the game is not open to the public yet. Request alpha access on the signup page; we email when your cohort is ready.",
+          "Invites roll out in batches — the game is not open to the public yet. Join the alpha list on the signup page; we email when your cohort is ready.",
       },
       {
         question: "How do I get invited?",
@@ -262,3 +262,24 @@ export const FAQ_SECTIONS: FaqSection[] = [
 
 /** Flat list for JSON-LD and simple consumers */
 export const FAQ_ENTRIES: FaqEntry[] = FAQ_SECTIONS.flatMap((s) => s.entries);
+
+/** Skeptic objections surfaced on the homepage (lookup by exact question). */
+export const LANDING_FAQ_KEYS = [
+  "Is the alpha free?",
+  "Do I need a crypto wallet for the alpha?",
+  "Do I need to understand Bitcoin to play?",
+  "When can I play?",
+  "Is Breachwalker pay to win?",
+  "Is Breachwalker an NFT game today?",
+] as const;
+
+export function landingFaqEntries(): FaqEntry[] {
+  const byQuestion = new Map(FAQ_ENTRIES.map((e) => [e.question, e]));
+  return LANDING_FAQ_KEYS.map((q) => {
+    const entry = byQuestion.get(q);
+    if (!entry) {
+      throw new Error(`LANDING_FAQ_KEYS missing FAQ entry: ${q}`);
+    }
+    return entry;
+  });
+}

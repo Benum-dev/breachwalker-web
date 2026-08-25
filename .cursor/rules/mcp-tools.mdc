@@ -1,0 +1,29 @@
+---
+description: When and how to use project MCP servers (Cloudflare + browser)
+alwaysApply: true
+---
+
+# MCP usage
+
+## Cloudflare (`cloudflare-api`)
+
+Project MCP: `.cursor/mcp.json` → `https://mcp.cloudflare.com/mcp` (OAuth on first connect).
+
+Use for Pages project status, DNS/custom domain checks, analytics tokens, and deploy-related questions. Prefer MCP/docs tools over guessing dashboard state. Do not paste secrets into tool args.
+
+## Browser (`cursor-ide-browser`)
+
+Use for visual/a11y verification of `npm run preview` or production:
+
+1. `browser_navigate` → target URL
+2. `browser_lock` → lock
+3. `browser_snapshot` (structure) and/or `browser_take_screenshot` (visual)
+4. Unlock when done
+
+Skill `verify-marketing-site` wraps the full smoke path.
+
+## Do not
+
+- Fabricate Cloudflare config or analytics numbers
+- Rely on screenshots alone for interaction — snapshot for refs
+- Enable unrelated MCP servers in this repo (Roblox, Firebase game backend, etc.)

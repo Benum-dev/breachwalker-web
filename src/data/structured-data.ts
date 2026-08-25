@@ -1,4 +1,5 @@
 import { SITE, pageUrl } from "./site";
+import { landingFaqEntries } from "./faq";
 
 const ORG_ID = `${SITE.url}/#organization`;
 const WEBSITE_ID = `${SITE.url}/#website`;
@@ -83,8 +84,25 @@ export function webPageJsonLd(opts: {
   };
 }
 
+export function landingFaqJsonLd() {
+  const entries = landingFaqEntries();
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: entries.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: entry.answer,
+      },
+    })),
+  };
+}
+
 export const HOME_JSON_LD = [
   organizationJsonLd(),
   webSiteJsonLd(),
   videoGameJsonLd(),
+  landingFaqJsonLd(),
 ];

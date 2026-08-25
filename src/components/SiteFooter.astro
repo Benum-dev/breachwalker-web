@@ -20,11 +20,13 @@ const year = new Date().getFullYear();
       <a href={pagePath("/bitcoin-rifts")}>Bitcoin rifts</a>
       <a href={pagePath("/item-economy")}>Item economy</a>
       <a href={pagePath("/faq")}>FAQ</a>
-      <a href={pagePath("/alpha")}>Alpha access</a>
+      <a href={pagePath("/alpha")}>Alpha</a>
       <a href={SITE.discordInviteUrl} target="_blank" rel="noopener noreferrer">Discord</a>
       <a href={pagePath("/privacy")}>Privacy</a>
       <a href={pagePath("/terms")}>Terms</a>
+      <!--email_off-->
       <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+      <!--/email_off-->
     </nav>
     <p class="site-footer__copy muted">
       © {year} {SITE.producer.name}. {COPY.footer.rights}

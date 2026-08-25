@@ -128,8 +128,12 @@ Cloudflare injects Web Analytics automatically for proxied Pages sites. Optional
 
 ## Copy & terminology
 
-Player-facing strings live in `src/data/copy.ts`. Follow breach + rift vocabulary — no "dive/prep/discover/territory/block" in UI (see monorepo terminology skill).
+Player-facing strings live in `src/data/copy.ts` (landing), `seo-pages.ts`, and `faq.ts`. Follow breach + rift vocabulary — no "dive/prep/discover/territory/block" in UI. Agent skill: `.cursor/skills/breachwalker-terminology/` (aligned with the game monorepo).
+
+## Agent / Cursor infra
+
+See [`AGENTS.md`](AGENTS.md) for stack, ground rules, MCP, and skills. Project rules live in `.cursor/rules/`; MCP in `.cursor/mcp.json` (Cloudflare API — OAuth on first use).
 
 ## Related repos
 
-- **Breachwalker** (game monorepo) — `phase2-prototype/` deploys to `game.breachwalker.com` via Firebase Hosting (separate deploy).
+- **Breachwalker** (game monorepo) — sibling `../Breachwalker/`; `phase2-prototype/` deploys to `game.breachwalker.com` via Firebase Hosting (separate deploy).

@@ -76,7 +76,10 @@ import { SITE, pagePath } from "../data/site";
 
     <h2>Contact</h2>
     <p>
-      Questions: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+      Questions:
+      <!--email_off-->
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+      <!--/email_off-->
     </p>
   </article>
 </BaseLayout>

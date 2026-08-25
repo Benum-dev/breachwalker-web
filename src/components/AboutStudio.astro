@@ -1,0 +1,153 @@
+---
+import { COPY } from "../data/copy";
+import { STUDIO } from "../data/studio";
+---
+
+<section class="about-studio" aria-labelledby="about-studio-heading">
+  <div class="container">
+    <h2 id="about-studio-heading">{COPY.aboutStudio.title}</h2>
+    <div class="about-studio__grid">
+      <div class="about-studio__copy">
+        <p class="about-studio__tagline muted">
+          {STUDIO.tagline} · {STUDIO.location}
+        </p>
+        <p class="muted">{STUDIO.blurb}</p>
+        <p class="about-studio__link">
+          <a href={STUDIO.url} target="_blank" rel="noopener noreferrer">
+            Visit {STUDIO.name} →
+          </a>
+        </p>
+        {
+          STUDIO.products.length > 0 && (
+            <p class="about-studio__also muted">
+              Also from {STUDIO.name}:{" "}
+              {STUDIO.products.map((product, i) => (
+                <span>
+                  {i > 0 ? " · " : ""}
+                  <a href={product.href} target="_blank" rel="noopener noreferrer">
+                    {product.name}
+                  </a>
+                </span>
+              ))}
+            </p>
+          )
+        }
+      </div>
+      <ul class="about-studio__people">
+        {
+          STUDIO.people.map((person) => (
+            <li class="about-studio__person">
+              <span class="about-studio__avatar" aria-hidden="true">
+                {person.initials}
+              </span>
+              <div>
+                <p class="about-studio__name">{person.name}</p>
+                <p class="muted about-studio__role">{person.role}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-studio {
+    padding: var(--space-3xl) 0;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .about-studio h2 {
+    margin-bottom: var(--space-xl);
+  }
+
+  .about-studio__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  @media (min-width: 640px) {
+    .about-studio__grid {
+      grid-template-columns: 1.4fr 1fr;
+      align-items: start;
+    }
+  }
+
+  .about-studio__tagline {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 var(--space-md);
+  }
+
+  .about-studio__link {
+    margin-top: var(--space-lg);
+  }
+
+  .about-studio__link a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .about-studio__also {
+    margin-top: var(--space-md);
+    font-size: 0.9375rem;
+  }
+
+  .about-studio__also a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .about-studio__also a:hover {
+    color: var(--color-accent);
+  }
+
+  .about-studio__people {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .about-studio__person {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-elevated);
+  }
+
+  .about-studio__avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--color-accent-dim);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .about-studio__name {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .about-studio__role {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+</style>

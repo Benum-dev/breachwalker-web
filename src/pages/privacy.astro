@@ -73,7 +73,9 @@ import { SITE } from "../data/site";
     <p>
       Depending on where you live, you may have rights to access, correct, or
       delete your personal data. Contact us at
-      <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a>.
+      <!--email_off-->
+      <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a>
+      <!--/email_off-->.
     </p>
 
     <h2>Children</h2>
@@ -90,7 +92,10 @@ import { SITE } from "../data/site";
 
     <h2>Contact</h2>
     <p>
-      Questions: <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a>
+      Questions:
+      <!--email_off-->
+      <a href={`mailto:${SITE.privacyEmail}`}>{SITE.privacyEmail}</a>
+      <!--/email_off-->
     </p>
   </article>
 </BaseLayout>

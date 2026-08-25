@@ -1,0 +1,57 @@
+---
+import { COPY } from "../data/copy";
+import { SITE, pagePath } from "../data/site";
+---
+
+<section class="community-band" aria-labelledby="community-heading">
+  <div class="container community-band__inner">
+    <div>
+      <h2 id="community-heading">{COPY.community.title}</h2>
+      <p class="muted">{COPY.community.body}</p>
+    </div>
+    <div class="community-band__actions">
+      <a
+        class="btn btn--primary"
+        href={SITE.discordInviteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-analytics="cta-discord"
+      >
+        {COPY.community.discordCta}
+      </a>
+      <a
+        class="btn btn--ghost"
+        href={pagePath("/alpha")}
+        data-analytics="cta-alpha"
+      >
+        {COPY.community.alphaCta}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .community-band {
+    padding: var(--space-3xl) 0;
+    border-top: 1px solid var(--color-border-subtle);
+    background: var(--color-bg-elevated);
+  }
+
+  .community-band__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .community-band h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .community-band__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+</style>

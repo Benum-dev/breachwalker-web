@@ -1,0 +1,35 @@
+---
+description: SEO, structured data, and two-layer marketing copy rules
+globs: "src/{data,pages,layouts,components}/**/*.{ts,astro}"
+alwaysApply: false
+---
+
+# SEO & marketing copy
+
+## Two copy layers
+
+| Layer | Surfaces | Bitcoin / chain jargon |
+|-------|----------|------------------------|
+| Diegetic | Hero, teasers, WhatIs, how-it-works, extraction-survival body, item-economy body, gameplay FAQ | Forbidden — Record, rift, breach, Hold, vault |
+| Acquisition | `metaTitle` / `metaDescription`, `/bitcoin-rifts/`, explicit Bitcoin FAQ Qs, crypto audience card, JSON-LD where needed | Allowed — explain build + SEO |
+
+Do not mix layers on one surface without intent. Diegetic answers that need tech detail point to `/bitcoin-rifts/`.
+
+## Per-page checklist
+
+- Unique `title` + `description` via `PageMeta`
+- Canonical via `pageUrl(path)`
+- OG image path registered (`og-images.ts` + `generate-og.mjs`)
+- JSON-LD: homepage Organization/WebSite/VideoGame; FAQ → FAQPage; content → WebPage + BreadcrumbList
+- Sitemap priority in `astro.config.mjs` for new indexable URLs
+- Internal links use trailing-slash `pagePath()`
+
+## Content sources
+
+- Landing chrome: `src/data/copy.ts`
+- SEO spokes: `src/data/seo-pages.ts` + thin `src/pages/<slug>.astro` wrapping `ContentPage`
+- FAQ: `src/data/faq.ts`
+
+## After deploy (human)
+
+Search Console sitemap, URL inspection, Rich Results Test, social debugger — see `README.md`.

@@ -1,0 +1,34 @@
+---
+description: Breachwalker marketing site charter — scope, stack, and hard non-goals
+alwaysApply: true
+---
+
+# breachwalker-web — Project charter
+
+**What this is:** Static marketing site for Breachwalker on Cloudflare Pages. Landing, alpha signup (Tally), FAQ, SEO spokes, privacy/terms.
+
+**What this is not:** Game client, Firebase backend, marketplace, wallet, or CMS. Those live in `../Breachwalker/`.
+
+## Always
+
+- Prefer static Astro + zero/minimal client JS
+- Keep player-facing strings in `src/data/*.ts` (`copy`, `seo-pages`, `faq`, `site`)
+- Follow breach + rift vocabulary (skill `breachwalker-terminology`)
+- Use design tokens in `src/styles/tokens.css` — no Tailwind, no new color systems
+- Preserve `trailingSlash: "always"` and use `pagePath` / `pageUrl` for internal links
+- After SEO/copy/layout changes, run `npm run check` (and `verify-marketing-site` when visual)
+
+## Never
+
+- Hardcode diegetic Bitcoin/blockchain jargon on hero, teasers, how-it-works body, or gameplay FAQ answers
+- Claim live NFT mint, wallet, or marketplace during closed alpha
+- Surface private lore truth (monorepo Docs/10 §3) in any layer
+- Add React/Vue/Svelte without an explicit need for interactivity
+- Couple this deploy to the game client (`game.breachwalker.com`)
+
+## Pointers
+
+- Hosting architecture: `../Breachwalker/Docs/08-web-hosting-and-analytics.md`
+- Lore: `../Breachwalker/Docs/10-world-lore-and-cosmology.md`
+- Routes & deploy: `README.md`
+- Agent entry: `AGENTS.md`
