@@ -94,6 +94,18 @@ When describing Arts in docs, comments, or copy that may reach players:
 
 Section titles like **Costing** (noun) are fine. Verbs and descriptions should use plain **costs {resource}**.
 
+### Ability node kinds (display rename)
+
+Schema/`node_kind` stays `flat` | `hook` | `art`. Player-facing labels on this site and in FAQ:
+
+| Code | Player-facing | Meaning |
+|------|---------------|---------|
+| `flat` | **Passive** | Standing investment / stat scaling |
+| `hook` | **Echo** | Auto-fires on a combat event; player never chooses timing |
+| `art` | **Art** | Player-activated, turn-consuming |
+
+Never say “Hook” or “Flat” in marketing/FAQ copy. Design docs and game code may keep `hook` / `flat` as systems terms.
+
 ## Naming palette (doc 10 §10)
 
 **Fits:** Record, entry, seal, ledger, wound, fracture, fissure, drift, echo, attunement, immersion, saturation, corrupted, unraveling, the ordinary / the mundane (genuine safety, not boring default), keystone, hinge, substrate, the between.
@@ -108,10 +120,10 @@ Use **breach** where the player crosses from the Hold into a rift:
 - Checklist: **Ready for the breach**
 - Hint: **Select a rift** / **Choose a rift before breaching**
 - Success: **Returned from breach**
-- Failure: **Lost in the breach** — unbanked loot gone; worn gear and packed kit return
+- Failure: **Lost in the breach** / **bond severed** — combat death ends that hero; unbanked loot gone; Hold vault persists
 - Collapse: **Collapsed** — forced rest on surface (not framed as death)
 
-Death is **not** a Walker/account wipe. **Interim:** unbanked loot lost; worn gear returns. **Phase 3.3 (doc 09):** combat death = **hero permadeath**; collapse still soft failure only.
+Death is **not** a Walker/account wipe. **Phase 3.3 (doc 09):** combat death = **hero permadeath** (bond severed); collapse still soft failure only.
 
 ## Marks (sole currency)
 
